@@ -1,29 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="js/Utils/vue.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/Utils/element.css">
+    <script src="js/Utils/element.js"></script>
+    <script src="js/Utils/vue.js"></script>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div id="app-5">
-    <p>{{ message }}</p>
-    <button v-on:click="reverseMessage">逆转消息</button>
+<div class="navigator"></div>
+<div class="top">
+    <div>
+        <h1>标题</h1>
+        <p>这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本</p>
+        <p>这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本</p>
+        <p>这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本</p>
+        <p>这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本这是一大段文本</p>
+        <p>&nbsp;</p>
+        <a href="##">探索更多 >> >> </a>
+    </div>
 </div>
+<div class="content">
+    <div class="content_top_top">
+        <div style="background-color: rgb(108,117,125)"class="content_top">
+            <h1>标题</h1>
+        </div>
+        <h2>标题</h2>
+        <p>这是一大段文本叽叽叽叽叽叽叽叽叽叽叽斤斤计较急急急急急急急急急急急急急急急叽叽叽叽叽叽叽叽叽</p>
+        <div class="content_top_bottom">
+            <p>点我点我</p>
+        </div>
+    </div>
+    <div class="content_top_top">
+        <div style="background-color: rgb(0,123,255)" class="content_top">
+            <h1>标题</h1>
+        </div>
+        <h2>标题</h2>
+        <p>这是一大段文本叽叽叽叽叽叽叽叽叽叽叽斤斤计较急急急急急急急急急急急急急急急叽叽叽叽叽叽叽叽叽</p>
+        <div class="content_top_bottom">
+            <p>点我点我</p>
+        </div>
+    </div>
+    <div class="content_top_top">
+        <div style="background-color: rgb(40,167,69)"class="content_top">
+            <h1>标题</h1>
+        </div>
+        <h2>标题</h2>
+        <p>这是一大段文本叽叽叽叽叽叽叽叽叽叽叽斤斤计较急急急急急急急急急急急急急急急叽叽叽叽叽叽叽叽叽</p>
+        <div class="content_top_bottom">
+            <p>点我点我</p>
+        </div>
+    </div>
+    <div class="content_top_top">
+        <div style="background-color: rgb(220,53,69)" class="content_top">
+            <h1>标题</h1>
+        </div>
+        <h2>标题</h2>
+        <p>这是一大段文本叽叽叽叽叽叽叽叽叽叽叽斤斤计较急急急急急急急急急急急急急急急叽叽叽叽叽叽叽叽叽</p>
+        <div class="content_top_bottom">
+            <p>点我点我</p>
+        </div>
+    </div>
 
+
+</div>
 </body>
 
 <script>
-    var app5 = new Vue({
-        el: '#app-5',
-        data: {
-            message: 'Hello Vue.js!'
+    export default {
+        data() {
+            return {
+                activeIndex: '1',
+                activeIndex2: '1'
+            };
         },
         methods: {
-            reverseMessage: function () {
-                this.message = this.message.split('').reverse().join('')
+            handleSelect(key, keyPath) {
+                console.log(key, keyPath);
             }
         }
-    })
+    }
 </script>
 </html>
