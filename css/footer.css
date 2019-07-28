@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    background: rgb(219, 211, 202);
+    padding: 4em 0;
+}
+
+.agileinfo_footer_grid h4 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.agileinfo_footer_grid ul li {
+    list-style-type: none;
+    margin-bottom: 1em;
+    font-size: 14px;
+    line-height: 1.8em;
+    color: #333333;
+    padding-left: 1em;
+}
+
+.agileinfo_footer_grid ul li span {
+    left: -1em;
+}
+
+.agileinfo_footer_grid ul li a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.agileinfo_footer_grid ul li a:hover {
+    color: #fff;
+}
+
+.agileinfo_footer_grid1 {
+    float: left;
+    width: 30%;
+    margin: 0 0.3em .3em 0em;
+}
+
+.space {
+    width: 10px;
+}
+
+.agileinfo_footer_grid:nth-child(1) {
+    padding: 0 2em 0 0;
+}
+
+.agileinfo_footer_grid p {
+    color: #333333;
+    line-height: 2em;
+}
+
+.agileinfo_footer_grid p span {
+    display: block;
+    margin: 1em 0 0;
+}
+
+@media (max-width: 991px) {
+    .agileinfo_footer_grid {
+        padding: 0 .5em;
+    }
+
+    .agileinfo_footer_grid h4 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .agileinfo_footer_grid p {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 3em 0;
+    }
+
+    .agileinfo_footer_grid:nth-child(1) {
+        padding: 0 1em 0 0;
+    }
+}
+
+@media (max-width: 667px) {
+    .agileinfo_footer_grid {
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    .agileinfo_footer_grid:nth-child(1) {
+        padding: 0 1em;
+    }
+
+    .agileinfo_footer_grid:nth-child(2) {
+        margin: 2em 0;
+    }
+
+    .agileinfo_footer_grid h4 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .agileinfo_footer_grid1 {
+        width: 14.45%;
+        margin: 0 .3em 0 0;
+    }
+}
