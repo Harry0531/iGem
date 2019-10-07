@@ -2962,7 +2962,7 @@ Version: 1.0
 }
 .team_slider{
     position: relative;
-    margin-top: -30px;
+    margin-top: -50px;
 }
 .team_slider .slick-next,
 .team_slider .slick-prev{
@@ -3035,10 +3035,9 @@ Version: 1.0
     margin: 0 0 24px;
 }
 .teamDesc img{
-    width: 75px;
-    height: 63px;
+    height: 200px;
     display: inline-block;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
 }
 .teamDesc p{
     font-size: 23px;
@@ -3099,7 +3098,7 @@ Version: 1.0
     left: 0;
     bottom: 0;
     content: '';
-    background: url(../images/border2.png) no-repeat center center;
+    background: url(../resource/Team/Introduction/slide_back.png) no-repeat center center;
     width: 100%;
     height: 174px;
     z-index: -1;
@@ -3149,8 +3148,8 @@ Version: 1.0
     display: inline-block;
 }
 .slider-nav .slick-slide.slick-current.slick-center li img{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     transition: all ease 400ms;
     -webkit-transition: all ease 400ms;
