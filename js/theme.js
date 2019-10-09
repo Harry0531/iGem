@@ -285,6 +285,49 @@
         });
     }
 
+    if ($('.team_slider3').length > 0) {
+        $('.team_slider3').slick({
+            autoplay: false,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            dots: false,
+            arrows: true,
+            centerMode: true,
+            asNavFor: '.slider-nav3',
+            centerPadding: '0'
+        });
+
+        $('.slider-nav3').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            asNavFor: '.team_slider3',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    }
+    if ($('.team_slider4').length > 0) {
+        $('.team_slider4').slick({
+            autoplay: false,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            dots: false,
+            arrows: true,
+            centerMode: true,
+            asNavFor: '.slider-nav4',
+            centerPadding: '0'
+        });
+
+        $('.slider-nav4').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            asNavFor: '.team_slider4',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    }
+
     /*--------------------------------------------------------
      / 10. Loan Calculation
      /--------------------------------------------------------*/
