@@ -1158,16 +1158,47 @@ Version: 1.0
 /*----------------------------------------------------
 / 7. Blog Page
 ------------------------------------------------------*/
+
+
+.el-popover__title{
+    color:#8180e0 !important;
+}
+.my_popover{
+    line-height: 30px;
+    color: #929292;
+    letter-spacing: 0;
+    font-size: 19px;
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+}
+.my_popover:hover{
+    cursor:pointer ;
+}
 .blogPage{
     padding: 50px 0 120px;
 }
 .singleBlog{
     position: relative;
     margin: 0 55px 82px 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow:rgba(129, 128, 224, 0.11) 0px 0px 29px 0px ;
+    -moz-box-shadow: rgba(129, 128, 224, 0.11) 0px 0px 29px 0px ;
+    box-shadow:rgba(129, 128, 224, 0.11) 0px 0px 29px 0px ;
 }
+
+.singleBlog h1{
+    background-color: #8180e0;
+    color:white;
+    height: 100px;
+    padding:25px;
+}
+
 .blogThumb{
     position: relative;
     margin: 0 0 46px;
+
 }
 .blogThumb img{
     width: 100%;
@@ -1321,14 +1352,14 @@ Version: 1.0
 .sidebar .recent_posts{}
 .payloan_post_widget{
     position: relative;
-    padding: 0 15px 33px 30px;
+    padding: 0 ;
     margin: 0 0 0;
 }
 .payloan_post_widget h4{
     font-size: 22px;
-    line-height: 30px;
     font-weight: 400;
-    margin-bottom: 14px;
+    margin-left: 15px;
+    margin-bottom: 5px;
 }
 .payloan_post_widget h4 a{
     display: inline-block;
@@ -1338,9 +1369,9 @@ Version: 1.0
     color: #222222;
 }
 .payloan_post_widget p{
+    margin-left: 18px;
     font-size: 17px;
     line-height: 25px;
-    margin-bottom: 7px;
 }
 .payloan_post_widget .author{
     font-size: 15px;
