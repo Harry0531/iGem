@@ -43,8 +43,15 @@ a {
 }
 
 header {
+    height: 100px;
+    padding-top: 10px;
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    background-color: #ffffff;
+    width: 100%;
 }
 
 .menu {
@@ -60,7 +67,7 @@ header {
     padding: 12px 0 0;
     background: #9dc852;
     text-align: center;
-    color: #ffffff;
+    color: #ffffff; /*字体颜色*/
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s background-color;
@@ -73,7 +80,6 @@ header {
     border-top: 5px solid #9dc852;
     border-left: 75px solid transparent;
     border-right: 75px solid transparent;
-    border-bottom: 0 solid #dddddd;
     position: absolute;
     top: 100%;
     left: 0;
@@ -100,7 +106,7 @@ header {
     height: 0;
     border-left: 75px solid transparent;
     border-right: 75px solid transparent;
-    border-bottom: 0 solid #ebebeb;
+    border-bottom: 0 solid #ebebeb; /*下拉二级菜单颜色*/
     position: absolute;
     bottom: 0;
     left: 0;
@@ -165,7 +171,7 @@ header {
     min-width: 100%;
     padding: 15px 0;
     position: absolute;
-    background: #ebebeb;
+    background: #ebebeb; /*下拉二级菜单颜色*/
     z-index: 100;
     transition: 0.5s padding, 0.5s background;
 }
@@ -174,7 +180,7 @@ header {
     content: "";
     display: block;
     height: 0;
-    border-top: 5px solid #ebebeb;
+    border-top: 5px solid #ebebeb;  /*下拉二级菜单颜色*/
     border-left: 75px solid transparent;
     border-right: 75px solid transparent;
     position: absolute;
@@ -186,16 +192,16 @@ header {
 
 .menu:not(:hover) > .menu-dropdown {
     padding: 4px 0;
-    background: #dddddd;
+    background: #dddddd; /*未展开箭头颜色*/
     z-index: 99;
 }
 
 .menu:not(:hover) > .menu-dropdown:after {
-    border-top-color: #dddddd;
+    border-top-color: #dddddd; /*未展开箭头颜色*/
 }
 
 .menu:not(:hover) > .menu-title:after {
-    border-bottom-color: #dddddd;
+    border-bottom-color: #dddddd; /*未展开箭头颜色*/
 }
 
 .menu-dropdown > * {

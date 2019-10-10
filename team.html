@@ -1,781 +1,870 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Payloan - Banking & Business Loan HTML5 Responsive Template</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Include All CSS -->
-        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/payloan-icon.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/icofont.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/animate.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/settings.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/owl.theme.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/owl.carousel.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/preset.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/theme.css"/>
-        <link rel="stylesheet" type="text/css" href="./css/responsive.css"/>
+<head>
+    <title>Payloan - Banking & Business Loan HTML5 Responsive Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/payloan-icon.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/icofont.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/settings.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/owl.theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/preset.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css"/>
+    <link rel="stylesheet" href="css/navigator.css">
 
-        <!-- Favicon Icon -->
-        <link rel="icon"  type="image/png" href="./images/favicon.png">
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
 
-        <style>
-            body{
-                overflow-y: hidden;
-            }
-            .hide_class{
-                display: none;
-            }
-            .display_content{
-                /*height: 100vh;*/
-            }
-        </style>
+    <style>
+        #b1, #b2, #b3, #b4 {
+            opacity: 0.3;
+        }
+    </style>
 
-        <script type="text/javascript">
-            window.onload=function () {
-                mouseWheel();
+    <script>
+        let flag = [false, false, false, false, false];
+        let last = flag;
+        const h1 = 444, h2 = 1444, h3 = 2333, h4 = 3222;
+        window.addEventListener("scroll", function () {
+            let height = $(document).scrollTop();
+
+            if (height < h1) {
+                flag[1] = flag[2] = flag[3] = flag[4] = false;
+            } else if (height < h2) {
+                flag[2] = flag[3] = flag[4] = false;
+                flag[1] = true;
+            } else if (height < h3) {
+                flag[1] = flag[3] = flag[4] = false;
+                flag[2] = true;
+            } else if (height < h4) {
+                flag[1] = flag[2] = flag[4] = false;
+                flag[3] = true;
+            } else {
+                flag[1] = flag[2] = flag[3] = false;
+                flag[4] = true;
             }
-        </script>
-    </head>
-    <body class="bg_right">
-        <!-- Preloading -->
-        <div class="preloader text-center">
-            <div class="la-ball-circus la-2x">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+
+            for (let i = 1; i <= 4; i++) {
+                let b = "b" + i.toString();
+                if (flag[i]) {
+                    document.getElementById(b).classList.remove("hide");
+                    document.getElementById(b).classList.add("show");
+                    document.getElementById(b).classList.remove("show-animate");
+                    if(!last[i]){
+                        document.getElementById(b).classList.add("show-animate");
+                    }
+                } else {
+                    document.getElementById(b).classList.remove("show");
+                    document.getElementById(b).classList.add("hide");
+                    document.getElementById(b).classList.remove("hide-animate");
+                    if(last[i]){
+                        document.getElementById(b).classList.add("hide-animate");
+                    }
+                }
+            }
+
+            last = flag;
+            console.log(flag[1], flag[2], flag[3], flag[4]);
+        });
+    </script>
+</head>
+<body class="bg_right">
+<!-- Preloading -->
+<div class="preloader text-center">
+    <div class="la-ball-circus la-2x">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!-- Preloading -->
+
+<!-- Header section -->
+<!--<header class="header_1" id="header">-->
+<!--    <div class="container">-->
+<!--        <div class="row align-items-center">-->
+<!--            <div class="col-lg-3 col-md-3">-->
+<!--                <div class="logo">-->
+<!--                    <a href="../模版/index.html"><img src="../模版/images/logo.png" alt=""></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-7 col-md-7">-->
+<!--                <nav class="mainmenu MenuInRight text-right">-->
+<!--                    <a href="javascript:void(0);" class="mobilemenu d-md-none d-lg-none d-xl-none">-->
+<!--                        <span></span>-->
+<!--                        <span></span>-->
+<!--                        <span></span>-->
+<!--                    </a>-->
+<!--                    <ul>-->
+<!--                        <li class="menu-item-has-children">-->
+<!--                            <a href="#">home</a>-->
+<!--                            <ul class="sub-menu">-->
+<!--                                <li><a href="../模版/index.html">Home 01</a></li>-->
+<!--                                <li><a href="../模版/index2.html">Home 02</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li class="menu-item-has-children">-->
+<!--                            <a href="#">Services</a>-->
+<!--                            <ul class="sub-menu">-->
+<!--                                <li><a href="../模版/services.html">Service 01</a></li>-->
+<!--                                <li><a href="../模版/services2.html">Service 02</a></li>-->
+<!--                                <li><a href="../模版/service_details.html">Service Details</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li class="menu-item-has-children">-->
+<!--                            <a href="#">Pages</a>-->
+<!--                            <ul class="sub-menu">-->
+<!--                                <li><a href="../模版/about.html">About</a></li>-->
+<!--                                <li><a href="../模版/404.html">404 Page</a></li>-->
+<!--                                <li><a href="../模版/faq.html">Faq Page</a></li>-->
+<!--                                <li class="menu-item-has-children">-->
+<!--                                    <a href="#">Portfolio</a>-->
+<!--                                    <ul class="sub-menu">-->
+<!--                                        <li><a href="../模版/portfolio.html">Portfolio</a></li>-->
+<!--                                        <li><a href="../模版/portfolio_detail.html">Portfolio Details</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                                <li class="menu-item-has-children">-->
+<!--                                    <a href="#">Testimonial</a>-->
+<!--                                    <ul class="sub-menu">-->
+<!--                                        <li><a href="../模版/testimonial.html">Testimonial 01</a></li>-->
+<!--                                        <li><a href="../模版/testimonial2.html">Testimonial 02</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+<!--                                <li><a href="team.html">Team Member</a></li>-->
+<!--                                <li><a href="../模版/application_form.html">Application Form</a></li>-->
+<!--                                <li><a href="../模版/loan_calculation.html">Loan Calculation</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li class="menu-item-has-children">-->
+<!--                            <a href="#">Blog</a>-->
+<!--                            <ul class="sub-menu">-->
+<!--                                <li><a href="../模版/blog.html">Blog Page</a></li>-->
+<!--                                <li><a href="../模版/single_blog.html">Blog Details</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li><a href="../模版/contact.html">Contact</a></li>-->
+<!--                    </ul>-->
+<!--                </nav>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 hidden-xs">-->
+<!--                <div class="navigator_btn btn_bg text-right">-->
+<!--                    <a class="common_btn" href="#">Apply Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
+<!-- Header section -->
+
+<header>
+    <ul class="hList">
+        <li>
+            <div class="menu">
+                <h2 class="menu-title">animals</h2>
+                <ul class="menu-dropdown">
+                    <li>cat</li>
+                    <li>dog</li>
+                    <li>horse</li>
+                    <li>cow</li>
+                    <li>pig</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="menu">
+                <h2 class="menu-title menu-title_2nd">names</h2>
+                <ul class="menu-dropdown">
+                    <li>Kevin</li>
+                    <li>Jim</li>
+                    <li>Andy</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="menu">
+                <h2 class="menu-title menu-title_3rd">things</h2>
+                <ul class="menu-dropdown">
+                    <li>bench</li>
+                    <li>pizza</li>
+                    <li>Honda CB125</li>
+                    <li>space</li>
+                    <li>black matter</li>
+                    <li>apple</li>
+                    <li>philodendron</li>
+                    <li>liver</li>
+                    <li>brass</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="menu">
+                <h2 class="menu-title menu-title_4th">Movies</h2>
+                <ul class="menu-dropdown">
+                    <li>Godzilla</li>
+                    <li>Man on Wire</li>
+                    <li>Spirited Away</li>
+                    <li>Interstellar</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<!-- Page Banner -->
+<section class="pagebanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bannerTitle text-left">
+                    <h2>Team Members</h2>
+                    <p>We are here to help you when you need your<br>financial support, then we are help you.</p>
+                </div>
             </div>
         </div>
-        <!-- Preloading -->
+    </div>
+</section>
+<!-- Page Banner -->
 
-        <!-- Header section -->
-        <header class="header_1" id="header">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-3">
-                        <div class="logo">
-                            <a href="../模版/index.html"><img src="../模版/images/logo.png" alt=""></a>
+<!-- Common Section -->
+<section class="commonSection teamPage">
+    <div class="container">
+
+        <div class="service_border">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="singleProcess_3 padTop_1">
+                        <div class="flipper">
+                            <div class="front">
+                                <img style="height: 200px;width: 200px;" src="resource/Team/Introduction/teacher1.png">
+                                <h4>Apply Bank Loan</h4>
+                            </div>
+                            <div class="back">
+                                <div class="bg_number">
+                                    <h1>01</h1>
+                                </div>
+                                <h4>Apply Bank Loan</h4>
+                                <p>We are provide best services and finaancial solution for you.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-7">
-                        <nav class="mainmenu MenuInRight text-right">
-                            <a href="javascript:void(0);" class="mobilemenu d-md-none d-lg-none d-xl-none">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                            <ul>
-                                <li class="menu-item-has-children">
-                                    <a href="#">home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="../模版/index.html">Home 01</a></li>
-                                        <li><a href="../模版/index2.html">Home 02</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Services</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="../模版/services.html">Service 01</a></li>
-                                        <li><a href="../模版/services2.html">Service 02</a></li>
-                                        <li><a href="../模版/service_details.html">Service Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="../模版/about.html">About</a></li>
-                                        <li><a href="../模版/404.html">404 Page</a></li>
-                                        <li><a href="../模版/faq.html">Faq Page</a></li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Portfolio</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="../模版/portfolio.html">Portfolio</a></li>
-                                                <li><a href="../模版/portfolio_detail.html">Portfolio Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Testimonial</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="../模版/testimonial.html">Testimonial 01</a></li>
-                                                <li><a href="../模版/testimonial2.html">Testimonial 02</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="team.html">Team Member</a></li>
-                                        <li><a href="../模版/application_form.html">Application Form</a></li>
-                                        <li><a href="../模版/loan_calculation.html">Loan Calculation</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="../模版/blog.html">Blog Page</a></li>
-                                        <li><a href="../模版/single_blog.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="../模版/contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="singleProcess_3">
+                        <div class="flipper">
+                            <div class="front">
+                                <img style="height: 200px;width: 200px;" src="resource/Team/Introduction/teacher2.png">
+                                <h4>Approved Bank Loan</h4>
+                            </div>
+                            <div class="back">
+                                <div class="bg_number">
+                                    <h1>02</h1>
+                                </div>
+                                <h4>Approved Bank Loan</h4>
+                                <p>We are provide best services and finaancial solution for you.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 hidden-xs">
-                        <div class="navigator_btn btn_bg text-right">
-                            <a class="common_btn" href="#">Apply Now</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="singleProcess_3 lastBox">
+                        <div class="flipper">
+                            <div class="front">
+                                <img style="height: 200px;width: 200px;" src="resource/Team/Introduction/teacher2.png">
+                                <h4>Approved Bank Loan</h4>
+                            </div>
+                            <div class="back">
+                                <div class="bg_number">
+                                    <h1>03</h1>
+                                </div>
+                                <h4>Review Your Loan</h4>
+                                <p>We are provide best services and finaancial solution for you.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- Header section -->
-
-        <!-- Page Banner -->
-        <section class="pagebanner display_content" style="height: 100vh;">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="bannerTitle text-left">
-                            <h2>Team Members</h2>
-                            <p>We are here to help you when you need your<br>financial support, then we are help you.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Page Banner -->       
-
-        <!-- Common Section -->
-        <section class="commonSection teamPage">
-            <div class="container">
-
-                <div class="service_border display_content" style="height: 100vh;margin-top: 60px">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singleProcess_3 padTop_1">
-                                <div class="flipper">
-                                    <div class="front">
-                                            <img style="height: 200px;width: 200px;" src="resource/Team/Introduction/teacher1.png">
-                                        <h4>Apply Bank Loan</h4>
-                                    </div>
-                                    <div class="back">
-                                        <div class="bg_number">
-                                            <h1>01</h1>
-                                        </div>
-                                        <h4>Apply Bank Loan</h4>
-                                        <p>We are provide best services and finaancial solution for you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singleProcess_3">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <img style="height: 200px;width: 200px;" src="resource/Team/Introduction/teacher2.png">
-                                        <h4>Approved Bank Loan</h4>
-                                    </div>
-                                    <div class="back">
-                                        <div class="bg_number">
-                                            <h1>02</h1>
-                                        </div>
-                                        <h4>Approved Bank Loan</h4>
-                                        <p>We are provide best services and finaancial solution for you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="singleProcess_3 lastBox">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <img style="height: 200px;width: 200px;" src="resource/Team/Introduction/teacher2.png">
-                                        <h4>Approved Bank Loan</h4>
-                                    </div>
-                                    <div class="back">
-                                        <div class="bg_number">
-                                            <h1>03</h1>
-                                        </div>
-                                        <h4>Review Your Loan</h4>
-                                        <p>We are provide best services and finaancial solution for you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row display_content">
-                    <div class="col-lg-12">
-                        <ul class="slider-nav">
-                            <li role="presentation"><img src="./resource/Team/Introduction/1.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/2.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/5.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/4.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/3.png" alt=""/></li>
-                        </ul>
-                        <div class="team_slider text-center" >
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row display_content">
-                    <div class="col-lg-12">
-                        <ul class="slider-nav2">
-                            <li role="presentation"><img src="./resource/Team/Introduction/6.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/7.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/8.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/9.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/10.png" alt=""/></li>
-                        </ul>
-                        <div class="team_slider2 text-center" >
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row display_content">
-                    <div class="col-lg-12">
-                        <ul class="slider-nav3">
-                            <li role="presentation"><img src="./resource/Team/Introduction/11.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/12.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/13.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/14.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/15.png" alt=""/></li>
-                        </ul>
-                        <div class="team_slider3 text-center" >
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row display_content">
-                    <div class="col-lg-12">
-                        <ul class="slider-nav4">
-                            <li role="presentation"><img src="./resource/Team/Introduction/16.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/17.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/18.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/19.png" alt=""/></li>
-                            <li role="presentation"><img src="./resource/Team/Introduction/20.png" alt=""/></li>
-                        </ul>
-                        <div class="team_slider4 text-center" >
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="singleTM">
-                                <div class="teamDesc">
-                                    <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
-                                    <p>
-                                        Make a site look like the demo, so to make your start into the world of<br>
-                                        possible we have included the demo content from and our showcase site import<br>
-                                        the sample files we ship with the theme and the core structure for your site<br>
-                                        already built in mind that evene the demo content
-                                    </p>
-                                </div>
-                                <div class="detail_TM">
-                                    <h5>Sabrina Michele</h5>
-                                    <p>UI/UX Designer</p>
-                                    <div class="star-rating">
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <i class="icofont-star"></i>
-                                        <span>
-                                            <i class="icofont-star"></i>
-                                            <i class="icofont-star"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
         </div>
-        </section>
-        <!-- Common Section -->
 
-        <!-- footer section -->
-        <footer class="footer">
-            <div class="container">
-
-            </div>
-        </footer>
-        <!-- footer section -->
-
-        <!-- Copyright section -->
-        <section class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p>Copyright <a href="#">Payloan</a>. All rights reserved</p>
+        <div class="row" style="margin-top: 120px" id="b1">
+            <div class="col-lg-12">
+                <ul class="slider-nav">
+                    <li role="presentation"><img src="./resource/Team/Introduction/1.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/2.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/5.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/4.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/3.png" alt=""/></li>
+                </ul>
+                <div class="team_slider text-center">
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 text-right">
-                        <a href="#" id="backTo"><i class="flaticon-chevron"></i></a>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Copyright section -->
+        </div>
+        <div class="row" style="margin-top: 120px" id="b2">
+            <div class="col-lg-12">
+                <ul class="slider-nav2">
+                    <li role="presentation"><img src="./resource/Team/Introduction/6.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/7.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/8.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/9.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/10.png" alt=""/></li>
+                </ul>
+                <div class="team_slider2 text-center">
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 120px" id="b3">
+            <div class="col-lg-12">
+                <ul class="slider-nav">
+                    <li role="presentation"><img src="./resource/Team/Introduction/11.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/12.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/13.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/14.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/15.png" alt=""/></li>
+                </ul>
+                <div class="team_slider text-center">
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 120px" id="b4">
+            <div class="col-lg-12">
+                <ul class="slider-nav">
+                    <li role="presentation"><img src="./resource/Team/Introduction/16.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/17.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/18.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/19.png" alt=""/></li>
+                    <li role="presentation"><img src="./resource/Team/Introduction/20.png" alt=""/></li>
+                </ul>
+                <div class="team_slider text-center">
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="singleTM">
+                        <div class="teamDesc">
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>
+                                Make a site look like the demo, so to make your start into the world of<br>
+                                possible we have included the demo content from and our showcase site import<br>
+                                the sample files we ship with the theme and the core structure for your site<br>
+                                already built in mind that evene the demo content
+                            </p>
+                        </div>
+                        <div class="detail_TM">
+                            <h5>Sabrina Michele</h5>
+                            <p>UI/UX Designer</p>
+                            <div class="star-rating">
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <i class="icofont-star"></i>
+                                <span>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Include All JS -->
-        <script src="./js/jquery.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
-        <script src="./js/jquery.themepunch.revolution.min.js"></script>
-        <script src="./js/jquery.themepunch.tools.min.js"></script>
-        <script src="./js/jquery-ui.js"></script>
-        <script src="./js/shuffle.js"></script>
-        <script src="./js/slick.js"></script>
-        <script src="./js/gmaps.js"></script>
-        <script src="./js/owl.carousel.js"></script>
-        <script src="./js/theme.js"></script>
-    </body>
+    </div>
+</section>
+<!-- Common Section -->
 
+<!-- footer section -->
+<footer class="footer">
+    <div class="container">
+
+    </div>
+</footer>
+<!-- footer section -->
+
+<!-- Copyright section -->
+<section class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Copyright <a href="#">Payloan</a>. All rights reserved</p>
+            </div>
+            <div class="col-sm-6 text-right">
+                <a href="#" id="backTo"><i class="flaticon-chevron"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Copyright section -->
+
+<!-- Include All JS -->
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.themepunch.revolution.min.js"></script>
+<script src="./js/jquery.themepunch.tools.min.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="./js/shuffle.js"></script>
+<script src="./js/slick.js"></script>
+<script src="./js/gmaps.js"></script>
+<script src="./js/owl.carousel.js"></script>
+<script src="./js/theme.js"></script>
+</body>
 </html>
