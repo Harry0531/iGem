@@ -1221,7 +1221,8 @@ Version: 1.0
     color: #8180e0;
 }
 .blogDetail p{
-    margin: 0 0 28px;
+    margin: 0 0 28px !important;
+    line-height: 30px;
 }
 .blogDetail .author{
     display: inline-block;
