@@ -1,0 +1,93 @@
+@keyframes text-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes text-show { /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes text-show { /* Safari 和 Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes text-show { /* Opera */
+
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.list {
+    z-index: 999;
+    position: fixed;
+    top: 300px;
+    right: 0;
+    width: 50px;
+}
+
+.list-item {
+    padding-right: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.list p {
+    margin: 0 15px 0 0;
+    padding: 0;
+    font-size: 14px;
+    display: none;
+}
+
+.list-dot {
+    background-color: rgb(115, 115, 115);
+    height: 14px;
+    width: 14px;
+    border-radius: 7px;
+    -moz-border-radius: 7px; /* 老的 Firefox */
+}
+
+.list:hover p {
+    display: block;
+    animation: text-show 1s;
+    -moz-animation: text-show 1s; /* Firefox */
+    -webkit-animation: text-show 1s; /* Safari 和 Chrome */
+    -o-animation: text-show 1s; /* Opera */
+}
+
+.list-item:hover > .list-dot{
+    margin-right: -3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    -moz-border-radius: 10px; /* 老的 Firefox */
+    background-color: black;
+}
+
+.list-item:hover > p{
+    font-size: larger;
+    color: black;
+}
+
+.list:hover {
+    width: 100%;
+}
