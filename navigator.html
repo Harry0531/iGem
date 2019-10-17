@@ -7,57 +7,97 @@
 </head>
 <body>
 <header>
+    <img class="header_icon" src="photo/arrow.png" height="90" width="90"
+         onClick="headerFunction();rotateFunction()"/>
     <ul class="hList">
         <li>
             <div class="menu">
-                <h2 class="menu-title">animals</h2>
+                <h1 class="menu-title"><a href="https://2019.igem.org/Team:BIT-China">Homepage</a></h1>
+                <ul class="menu-dropdown"></ul>
+            </div>
+        </li>
+        <li>
+            <div class="menu">
+                <h1 class="menu-title menu-title_2nd">Team</h1>
                 <ul class="menu-dropdown">
-                    <li>cat</li>
-                    <li>dog</li>
-                    <li>horse</li>
-                    <li>cow</li>
-                    <li>pig</li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Team">Team</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Collaborations">Collaborations</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Gallery">Gallery</a></li>
                 </ul>
             </div>
         </li>
         <li>
             <div class="menu">
-                <h2 class="menu-title menu-title_2nd">names</h2>
+                <h1 class="menu-title menu-title_3rd">Project</h1>
                 <ul class="menu-dropdown">
-                    <li>Kevin</li>
-                    <li>Jim</li>
-                    <li>Andy</li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Description">Description</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Background">Background</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Design">Design</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Experiments">Experiments</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Notebook">Notebook</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Results">Results</a></li>
+                    <li><a href="https://2019.igem.org/Team:BIT-China/Demonstrate">Demonstrate</a></li>
                 </ul>
             </div>
         </li>
         <li>
             <div class="menu">
-                <h2 class="menu-title menu-title_3rd">things</h2>
-                <ul class="menu-dropdown">
-                    <li>bench</li>
-                    <li>pizza</li>
-                    <li>Honda CB125</li>
-                    <li>space</li>
-                    <li>black matter</li>
-                    <li>apple</li>
-                    <li>philodendron</li>
-                    <li>liver</li>
-                    <li>brass</li>
-                </ul>
+                <h1 class="menu-title menu-title_4th"><a href="https://2019.igem.org/Team:BIT-China/Parts">Parts</a></h1>
+                <ul class="menu-dropdown"></ul>
             </div>
         </li>
         <li>
             <div class="menu">
-                <h2 class="menu-title menu-title_4th">Movies</h2>
-                <ul class="menu-dropdown">
-                    <li>Godzilla</li>
-                    <li>Man on Wire</li>
-                    <li>Spirited Away</li>
-                    <li>Interstellar</li>
-                </ul>
+                <h1 class="menu-title"><a href="https://2019.igem.org/Team:BIT-China/Model">Model</a></h1>
+                <ul class="menu-dropdown"></ul>
+            </div>
+        </li>
+        <li>
+            <div class="menu">
+                <h1 class="menu-title menu-title_2nd"><a href="https://2019.igem.org/Team:BIT-China/Human_Practices" style="font-size: small">Human Practices</a></h1>
+                <ul class="menu-dropdown"></ul>
+            </div>
+        </li>
+        <li>
+            <div class="menu">
+                <h1 class="menu-title menu-title_3rd"><a href="https://2019.igem.org/Team:BIT-China/Safety">Safety</a></h1>
+                <ul class="menu-dropdown"></ul>
+            </div>
+        </li>
+        <li>
+            <div class="menu">
+                <h1 class="menu-title menu-title_4th"><a href="https://igem.org/2019_Judging_Form?id=2972">Judging form</a></h1>
+                <ul class="menu-dropdown"></ul>
             </div>
         </li>
     </ul>
 </header>
+
+<script>
+    var show = false;
+    var current = 0;
+
+    function headerFunction() {
+        show = !show;
+        if (show) {
+            document.getElementsByClassName("hList")[0].style.display = "block";
+            document.getElementsByClassName("hList")[0].style.animation = "moveToRight 0.7s";
+        } else {
+            document.getElementsByClassName("hList")[0].style.animation = "moveToLeft 1s";
+            setTimeout(function () {
+                document.getElementsByClassName("hList")[0].style.display = "none";
+            }, 1000);
+        }
+    }
+
+    function rotateFunction() {
+        if (show) {
+            current += 90;
+        } else {
+            current -= 90;
+        }
+        document.getElementsByClassName("header_icon")[0].style.transform = 'rotate(' + current + 'deg)';
+    }
+</script>
 </body>
 </html>
