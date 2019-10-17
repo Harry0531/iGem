@@ -23,6 +23,20 @@
     <link rel="stylesheet" type="text/css" href="./css/element.css"/>
     <link rel="stylesheet" href="css/navigator.css">
     <link rel="stylesheet" href="css/autoMenu.css">
+    <style>
+        .el-collapse-item__header{
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        .el-collapse-item__content{
+            padding-left: 30px;
+        }
+        .el-collapse-item__content h4{
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+    </style>
 </head>
 <body class="bg_right">
 <!-- Preloading -->
@@ -117,196 +131,200 @@
                 <div class="col-lg-12 col-md-8">
                     <div class="singleBlog">
                         <h1>Background</h1>
-                        <div class="blogDetail" style="margin: 20px;">
-                            <!--                            <h4>We are here to help you when you need your<br>financial support, then we are help you.</h4>-->
-                            <!--                            <p>-->
-                            <!--                                We all know how hard it can be to make a site look like the demo, so to make your start into-->
-                            <!--                                the world of as easy as possible have included the demo content from showcase site imply-->
-                            <!--                                <span >-->
-                            <!--                                        <el-popover-->
-                            <!--                                                placement="top-start"-->
-                            <!--                                                title="标题"-->
-                            <!--                                                width="200"-->
-                            <!--                                                trigger="hover"-->
-                            <!--                                                content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">-->
-                            <!--                                    <a class="my_popover" slot="reference">test[1]</a>-->
-                            <!--                                 </el-popover>-->
-                            <!--                                    </span>-->
-                            <!--                                import the sample files we ship with the theme and the core structure for your site is aleady-->
-                            <!--                                built mind that even if you don’t use the demo content.-->
-                            <!--                            </p>-->
+                        <div class="blogDetail">
+                            <el-collapse v-model="activeName">
+                                <el-collapse-item title="Introduction" name="1">
+                                    <p>With the rapid development of modern biotechnology, fermentation engineering has made
+                                    great progress in microbial breeding, biosynthesis, regulation mechanism and the
+                                    development of microbial resources, which is laying a solid foundation for the emergence
+                                    of the concept of cell factory. Using DNA recombination technology to construct
+                                    genetically engineered bacteria to complete industrial production has become the best
+                                    choice for more and more manufacturers. Genetically engineered bacteria not only have
+                                    extremely low cost and very efficient output, but also can greatly improve the
+                                    fermentation level of products, and can also introduce foreign genes into them to
+                                    produce products that could not be produced by original engineered bacteria. It is
+                                    estimated that the global market for fermented products has 12 billion to 13 billion US
+                                    dollars, of which 46% are antibiotics, 16.3% are amino acids, 13.2% are organic acids,
+                                        10% are enzymes and 14.5% are other fermented products [1].</p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Why do we choose the transcriptional resource allocation?" name="2">
+                                    <h4>Significance of resource allocation</h4>
+                                    <p>In current methods, many strategies have been used to increase productivity of cell
+                                        factories, such as transcription of genetic materials, regulation of translation, gene
+                                        coupling and decoupling, alteration of metabolic pathways, changes of key enzymes, and
+                                        changes of substrate concentration. But if we want cells to function differently at
+                                        different times and allocate specific resources to specific genes producing target
+                                        products, resources need to be allocated reasonably</p>
+                                    <h4>Significance of transcriptional resource allocation</h4>
+                                    <p>The application of refined cell factories to achieve Bio-Green manufacturing of energy,
+                                        medicine, chemicals as well as efficient and sustainable production, requires the
+                                        rational allocation of resources that can be profitable by cells. However, there are
+                                        many kinds of resources that can be utilized by cells. Why do we choose to allocate
+                                        transcriptional resources? Transcription is an important part of the central law and the
+                                        first step in gene expression. Catalysts and enzymes are one of the decisive factors for
+                                        the occurrence of intracellular metabolic reactions and their reaction rates. When the
+                                        catalytic properties of the enzyme are constant, the amount of the enzyme determines the
+                                        reaction rate. The amount of enzymes depend on the transcription and translation of
+                                        cells. Here, we define transcription resources as substrates (nucleotides, etc.)
+                                        directly involved in transcription and substances (transcription factors, RNA
+                                        polymerase, etc.) that assist in transcription. In refined cell factories, the amount of
+                                        transcriptional resources available to cells is limited, and we need to make efficient
+                                        use of them. The production model we designed is that cells grow at a high speed in the
+                                        prophase, and transcriptional resources are allocated to the metabolism of cell growth.
+                                        When the number and size of cell factories grow to the appropriate scale, the focus of
+                                        transcriptional resource allocation shifts from cell growth to cell production. It is a
+                                        kind of new cell factory with high intelligence and refinement. Such cell factory can
+                                        minimize the consumption of resources needed for their own growth and accelerate their
+                                        growth during the growth period, while most of the resources are used to synthesize
+                                        target products during the production period, thus saving resources and increasing
+                                        production. For industrial production, our transcription resource allocation system can
+                                        also save costs and efficiently produce more target products.</p>
+                                </el-collapse-item>
+                                <el-collapse-item title="How do we complete transcriptional resource allocation?" name="3">
+                                    <h4>Quorum sensing</h4>
+                                    <p>Bacteria can sense the concentration changes of a small molecular weight chemical
+                                        signaling molecule secreted by other bacteria growing with them in the growing
+                                        environment. This phenomenon is called Quorum Sensing (QS), which can promote the
+                                        communication between bacterial individuals and coordinate the behavior of groups. These
+                                        signaling molecules secreted by bacteria can regulate their biological behavior, so they
+                                        are called self-inducible factors. Once the concentration of self-inducible factor
+                                        reaches a certain threshold, the quorum sensing will activate or inhibit the expression
+                                        of some target genes, thus regulating the biological behavior of bacteria. Quorum
+                                        sensing is involved in regulating various biological behaviors of bacteria, such as
+                                        bioluminescence, cell membrane formation, cell differentiation, extracellular
+                                        polysaccharide formation, exercise, antibiotic production, etc[2].</p>
+                                    <p>The QS signaling molecule of Gram-negative bacteria is also known as autoinducer (AI1).
+                                        AHLs consist of a conservative hydrophobic head of the homoserine lactone ring and a
+                                        variable hydrophilic tail of the amide side chain, which determines the diversity of
+                                        AHLs. The differences between AHLs are mainly reflected in the presence or absence of
+                                        side chains of amides, the difference of substituted groups (hydrogen, hydroxyl or
+                                        carbonyl) at the third carbon atom of amides, and the presence or absence of one or more
+                                        unsaturated bonds in side chains. The difference of AHLs is formed by the acyl side
+                                        chains of different acyl carrier proteins bound by homoserine in the synthesis process.
+                                        The difference of AHLs is due to the combination of homoserine with acyl side chains of
+                                        different acyl carrier proteins in the synthesis process. AHLs have short amide side
+                                        chains that allow them to pass passively into and out of bacterial cell wall. This is
+                                        different from AHLs and AIP (signal molecules of Gram-positive bacteria) with long amide
+                                        side chains, which cross bacterial cell membranes through an active transport
+                                        mechanism.</p>
+                                    <p>LuxI and LuxR proteins are involved in quorum sensing in most gram-negative bacteria.
+                                        LuxI protein is an autoinducer synthase, which can synthesize signal molecules AHLs.
+                                        LuxR protein is an autoinducer receptor in cytoplasm and also a transcription activating
+                                        element. When AHLs diffuse to extracellular space, they accumulate with the increase of
+                                        cell density. When this signal density accumulates to the critical density, they bind to
+                                        LuxR. The combined complex can activate gene transcription. With the proliferation of
+                                        AHLs outside the cell, its density also accumulates with the increase of cell density.
+                                        When the density of this signal molecule accumulates to the critical density, it binds
+                                        to LuxR. And the binding complex can activate gene transcription. Since LuxR protein
+                                        only binds to specific AHLs, LuxI / LuxR system is also mainly used for intraspecific
+                                        quorum sensing. However, LuxR protein that bind several AHLs have been reported. For
+                                        example, Salmonella SdiA protein are mainly related to bacterial interspecific
+                                        induction[3].</p>
 
-                            <h2>Introduction</h2>
-                            <p>With the rapid development of modern biotechnology, fermentation engineering has made
-                                great progress in microbial breeding, biosynthesis, regulation mechanism and the
-                                development of microbial resources, which is laying a solid foundation for the emergence
-                                of the concept of cell factory. Using DNA recombination technology to construct
-                                genetically engineered bacteria to complete industrial production has become the best
-                                choice for more and more manufacturers. Genetically engineered bacteria not only have
-                                extremely low cost and very efficient output, but also can greatly improve the
-                                fermentation level of products, and can also introduce foreign genes into them to
-                                produce products that could not be produced by original engineered bacteria. It is
-                                estimated that the global market for fermented products has 12 billion to 13 billion US
-                                dollars, of which 46% are antibiotics, 16.3% are amino acids, 13.2% are organic acids,
-                                10% are enzymes and 14.5% are other fermented products [1].</p>
+                                    <h4>σ factor expression system and T7 expression system</h4>
+                                    <p>σ factor and core enzymes are the components of RNA polymerase. σ factor itself can’t
+                                        initiate transcription, but can specifically tow RNA polymerase to specific promoter
+                                        binding sites. The σ factor expression system has the advantages of no cytotoxicity and
+                                        no leaked expression, and it has many optional promoters and a wide range of gene
+                                        expression intensity.</p>
+                                    <p>T7 RNA polymerase-dominated transcription is very active. RNA polymerase-driven
+                                        transcription in host cells can not compete with T7 RNA polymerase. Almost all
+                                        transcription in cells occurs rapidly due to the activation of T7 RNA polymerase.</p>
 
+                                    <h4>Lycopene</h4>
+                                    <p>Lycopene, also known as ψ-carotene, belongs to isoprene compounds. Lycopene is a kind of
+                                        non-circular planar polyunsaturated fatty hydrocarbon. Its molecular structure formula
+                                        contains 11 conjugated double bonds and 2 non-conjugated double bonds. Lycopene is the
+                                        most effective antioxidant in carotenoids. It regulates the metabolism of cholesterol
+                                        and has the functions of anti-cancer and improving immunity. Lycopene is widely used in
+                                        health food, medicine and cosmetics.</p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Prospect" name="4">
+                                    <h4>Significance for Industrial Production</h4>
+                                    <p>Our project gives bacteria the wisdom to judge their own density and transform between
+                                        growth and production. This has great practical significance. </p>
+                                    <p>Firstly, compared with the high density culture technology commonly used in industry, it
+                                        is no longer necessary to monitor the bacterial density in the tank in real time, which
+                                        reduces the cost of technology[5]. Instead of adding inducers from outside, T7 and σ
+                                        factors expression system can induce the distribution of transcriptional resources from
+                                        growth to production, which saves labor costs and huge costs of large-scale use of
+                                        inducers in industrial production . Compared with the two-stage fermentation method,
+                                        which regulates the growth of engineering bacteria to appropriate density and then
+                                        starts to synthesize products by adjusting oxygen input, our strategy does not require
+                                        the production of target products through anaerobic fermentation stage[6], and does not
+                                        need to change the gas environment in the production stage. It’s more convenient. </p>
+                                    <p>Secondly, our strain can utilize industrial materials more efficiently, achieve the best
+                                        balance in growth rate and production rate, increase the production of target products,
+                                        avoids the inhibition of metabolic byproduct on recombinant cells, and reduces the
+                                        oxygen supply restriction in fermentation tank.</p>
+                                    <p>Finally, the idea of allocating transcriptional resources in our project provides a
+                                        feasible direction for future industrial intelligent production and lays a
+                                        foundation.</p>
 
-                            <h2>Why do we choose the transcriptional resource allocation?</h2>
+                                    <h4>Significance for Industrial Production</h4>
+                                    <p>Our project gives bacteria the wisdom to judge their own density and transform between
+                                        growth and production. This has great practical significance. </p>
+                                    <p>Firstly, compared with the high density culture technology commonly used in industry, it
+                                        is no longer necessary to monitor the bacterial density in the tank in real time, which
+                                        reduces the cost of technology[5]. Instead of adding inducers from outside, T7 and σ
+                                        factors expression system can induce the distribution of transcriptional resources from
+                                        growth to production, which saves labor costs and huge costs of large-scale use of
+                                        inducers in industrial production . Compared with the two-stage fermentation method,
+                                        which regulates the growth of engineering bacteria to appropriate density and then
+                                        starts to synthesize products by adjusting oxygen input, our strategy does not require
+                                        the production of target products through anaerobic fermentation stage[6], and does not
+                                        need to change the gas environment in the production stage. It’s more convenient. </p>
+                                    <p>Secondly, our strain can utilize industrial materials more efficiently, achieve the best
+                                        balance in growth rate and production rate, increase the production of target products,
+                                        avoids the inhibition of metabolic byproduct on recombinant cells, and reduces the
+                                        oxygen supply restriction in fermentation tank.</p>
+                                    <p>Finally, the idea of allocating transcriptional resources in our project provides a
+                                        feasible direction for future industrial intelligent production and lays a
+                                        foundation.</p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Future Technology and Application Prospects" name="5">
+                                    <p>If the allocation of transcriptional resources can be achieved to the extreme, the
+                                        secondary metabolites in cells will only be our target products. Resources will be more
+                                        concentrated on the target products, which will further improve efficiency and further
+                                        reduce the waste of resources.</p>
 
-                            <h4>Significance of resource allocation</h4>
-                            <p>In current methods, many strategies have been used to increase productivity of cell
-                                factories, such as transcription of genetic materials, regulation of translation, gene
-                                coupling and decoupling, alteration of metabolic pathways, changes of key enzymes, and
-                                changes of substrate concentration. But if we want cells to function differently at
-                                different times and allocate specific resources to specific genes producing target
-                                products, resources need to be allocated reasonably</p>
-                            <h4>Significance of transcriptional resource allocation</h4>
-                            <p>The application of refined cell factories to achieve Bio-Green manufacturing of energy,
-                                medicine, chemicals as well as efficient and sustainable production, requires the
-                                rational allocation of resources that can be profitable by cells. However, there are
-                                many kinds of resources that can be utilized by cells. Why do we choose to allocate
-                                transcriptional resources? Transcription is an important part of the central law and the
-                                first step in gene expression. Catalysts and enzymes are one of the decisive factors for
-                                the occurrence of intracellular metabolic reactions and their reaction rates. When the
-                                catalytic properties of the enzyme are constant, the amount of the enzyme determines the
-                                reaction rate. The amount of enzymes depend on the transcription and translation of
-                                cells. Here, we define transcription resources as substrates (nucleotides, etc.)
-                                directly involved in transcription and substances (transcription factors, RNA
-                                polymerase, etc.) that assist in transcription. In refined cell factories, the amount of
-                                transcriptional resources available to cells is limited, and we need to make efficient
-                                use of them. The production model we designed is that cells grow at a high speed in the
-                                prophase, and transcriptional resources are allocated to the metabolism of cell growth.
-                                When the number and size of cell factories grow to the appropriate scale, the focus of
-                                transcriptional resource allocation shifts from cell growth to cell production. It is a
-                                kind of new cell factory with high intelligence and refinement. Such cell factory can
-                                minimize the consumption of resources needed for their own growth and accelerate their
-                                growth during the growth period, while most of the resources are used to synthesize
-                                target products during the production period, thus saving resources and increasing
-                                production. For industrial production, our transcription resource allocation system can
-                                also save costs and efficiently produce more target products.</p>
-
-                            <h2>How do we complete transcriptional resource allocation?</h2>
-                            <h4>Quorum sensing</h4>
-                            <p>Bacteria can sense the concentration changes of a small molecular weight chemical
-                                signaling molecule secreted by other bacteria growing with them in the growing
-                                environment. This phenomenon is called Quorum Sensing (QS), which can promote the
-                                communication between bacterial individuals and coordinate the behavior of groups. These
-                                signaling molecules secreted by bacteria can regulate their biological behavior, so they
-                                are called self-inducible factors. Once the concentration of self-inducible factor
-                                reaches a certain threshold, the quorum sensing will activate or inhibit the expression
-                                of some target genes, thus regulating the biological behavior of bacteria. Quorum
-                                sensing is involved in regulating various biological behaviors of bacteria, such as
-                                bioluminescence, cell membrane formation, cell differentiation, extracellular
-                                polysaccharide formation, exercise, antibiotic production, etc[2].</p>
-                            <p>The QS signaling molecule of Gram-negative bacteria is also known as autoinducer (AI1).
-                                AHLs consist of a conservative hydrophobic head of the homoserine lactone ring and a
-                                variable hydrophilic tail of the amide side chain, which determines the diversity of
-                                AHLs. The differences between AHLs are mainly reflected in the presence or absence of
-                                side chains of amides, the difference of substituted groups (hydrogen, hydroxyl or
-                                carbonyl) at the third carbon atom of amides, and the presence or absence of one or more
-                                unsaturated bonds in side chains. The difference of AHLs is formed by the acyl side
-                                chains of different acyl carrier proteins bound by homoserine in the synthesis process.
-                                The difference of AHLs is due to the combination of homoserine with acyl side chains of
-                                different acyl carrier proteins in the synthesis process. AHLs have short amide side
-                                chains that allow them to pass passively into and out of bacterial cell wall. This is
-                                different from AHLs and AIP (signal molecules of Gram-positive bacteria) with long amide
-                                side chains, which cross bacterial cell membranes through an active transport
-                                mechanism.</p>
-                            <p>LuxI and LuxR proteins are involved in quorum sensing in most gram-negative bacteria.
-                                LuxI protein is an autoinducer synthase, which can synthesize signal molecules AHLs.
-                                LuxR protein is an autoinducer receptor in cytoplasm and also a transcription activating
-                                element. When AHLs diffuse to extracellular space, they accumulate with the increase of
-                                cell density. When this signal density accumulates to the critical density, they bind to
-                                LuxR. The combined complex can activate gene transcription. With the proliferation of
-                                AHLs outside the cell, its density also accumulates with the increase of cell density.
-                                When the density of this signal molecule accumulates to the critical density, it binds
-                                to LuxR. And the binding complex can activate gene transcription. Since LuxR protein
-                                only binds to specific AHLs, LuxI / LuxR system is also mainly used for intraspecific
-                                quorum sensing. However, LuxR protein that bind several AHLs have been reported. For
-                                example, Salmonella SdiA protein are mainly related to bacterial interspecific
-                                induction[3].</p>
-
-                            <h4>σ factor expression system and T7 expression system</h4>
-                            <p>σ factor and core enzymes are the components of RNA polymerase. σ factor itself can’t
-                                initiate transcription, but can specifically tow RNA polymerase to specific promoter
-                                binding sites. The σ factor expression system has the advantages of no cytotoxicity and
-                                no leaked expression, and it has many optional promoters and a wide range of gene
-                                expression intensity.</p>
-                            <p>T7 RNA polymerase-dominated transcription is very active. RNA polymerase-driven
-                                transcription in host cells can not compete with T7 RNA polymerase. Almost all
-                                transcription in cells occurs rapidly due to the activation of T7 RNA polymerase.</p>
-
-                            <h4>Lycopene</h4>
-                            <p>Lycopene, also known as ψ-carotene, belongs to isoprene compounds. Lycopene is a kind of
-                                non-circular planar polyunsaturated fatty hydrocarbon. Its molecular structure formula
-                                contains 11 conjugated double bonds and 2 non-conjugated double bonds. Lycopene is the
-                                most effective antioxidant in carotenoids. It regulates the metabolism of cholesterol
-                                and has the functions of anti-cancer and improving immunity. Lycopene is widely used in
-                                health food, medicine and cosmetics.</p>
-
-                            <h2>Prospect</h2>
-                            <h4>Significance for Industrial Production</h4>
-                            <p>Our project gives bacteria the wisdom to judge their own density and transform between
-                                growth and production. This has great practical significance. </p>
-                            <p>Firstly, compared with the high density culture technology commonly used in industry, it
-                                is no longer necessary to monitor the bacterial density in the tank in real time, which
-                                reduces the cost of technology[5]. Instead of adding inducers from outside, T7 and σ
-                                factors expression system can induce the distribution of transcriptional resources from
-                                growth to production, which saves labor costs and huge costs of large-scale use of
-                                inducers in industrial production . Compared with the two-stage fermentation method,
-                                which regulates the growth of engineering bacteria to appropriate density and then
-                                starts to synthesize products by adjusting oxygen input, our strategy does not require
-                                the production of target products through anaerobic fermentation stage[6], and does not
-                                need to change the gas environment in the production stage. It’s more convenient. </p>
-                            <p>Secondly, our strain can utilize industrial materials more efficiently, achieve the best
-                                balance in growth rate and production rate, increase the production of target products,
-                                avoids the inhibition of metabolic byproduct on recombinant cells, and reduces the
-                                oxygen supply restriction in fermentation tank.</p>
-                            <p>Finally, the idea of allocating transcriptional resources in our project provides a
-                                feasible direction for future industrial intelligent production and lays a
-                                foundation.</p>
-
-                            <h2>Future Technology and Application Prospects</h2>
-                            <p>If the allocation of transcriptional resources can be achieved to the extreme, the
-                                secondary metabolites in cells will only be our target products. Resources will be more
-                                concentrated on the target products, which will further improve efficiency and further
-                                reduce the waste of resources.</p>
-
-                            <p>Our iGEM project this year can also be used as a standardized component for technical
-                                integration with previous iGEM projects. That is to say, we hope to integrate the
-                                various functions implemented in previous iGEM projects, such as microorganism
-                                intelligent response and regulation of temperature, pH and redox state (I'M HeRE, 2013,
-                                pH controller, 2015, who can get an A, 2018), intelligent protection of engineering
-                                bacteria technical safety (E.co-Lock, 2014), and automatic elimination of low-yield
-                                engineering bacteria (P-SLACKiller, 2016), in order to achieve a more intelligent and
-                                refined cell factory, further energy saving and emission reduction and increase
-                                production.</p>
-                            <p>In the application of industrial production, our engineering bacteria can be further
-                                domesticated to adapt to the industrial production of large fermenter environment, and
-                                then applied to industrial production. We can increase the negative feedback system to
-                                improve the stability of the system. According to the different rates and environments
-                                required for industrial production, we can change or mutagenesis based on the sequence
-                                library of T7 and σ factors, and modify the critical density of strain for switching
-                                between growth and production, in order to meet the production needs of different
-                                products. According to the different target products needed in industrial production, we
-                                can change the key enzyme sequence after T7 and σ expression system to produce other
-                                industrial products besides lycopene and hope this strategy more widely used in
-                                production</p>
-
-                            <h4>Reference</h4>
-                            <p>[1] 田洪涛. "现代发酵工艺原理与技术." (2007): 14-23.<br>
-                                [2] 张晓翠,黄世阳,李翔, 等.细菌群体感应机制的动力学建模研究[J].生物物理学 2018,6(2):7-30<br>
-                                [3] 张晓兵,府伟灵.细菌群体感应系统研究进展[J].中华医院感染学杂志, 2010,20(11):1639-1642.<br>
-                                [4] YANG Fan,LI Shu-Mei,CHEN Ping,LI Jin-Fen.Measurement of Cell Concentration in
-                                Fermentation Liquid[J].Chinese Journal of Spectroscopy Laboratory, 2009, 26(06):
-                                001643-1645.<br>
-                                [5] Kim EM, Woo HM, Tian T, Yilmaz S, Javidpour P, Keasling JD, Lee TS. Autonomous
-                                control of metabolic state by a quorum sensing (QS)-mediated regulator for bisabolene
-                                production in engineered E. coli. Metab Eng. 2017;44:325–336.<br>
-                                [6] Chen Kequan , Jiang Min, Su Li , Wei Ping. CO2 fixation by Actinobacillus
-                                succinogenes in succinic acidproduction [J]. Chemical Engineering, 2009, 37
-                                (1):49-52<br>
-                            </p>
+                                    <p>Our iGEM project this year can also be used as a standardized component for technical
+                                        integration with previous iGEM projects. That is to say, we hope to integrate the
+                                        various functions implemented in previous iGEM projects, such as microorganism
+                                        intelligent response and regulation of temperature, pH and redox state (I'M HeRE, 2013,
+                                        pH controller, 2015, who can get an A, 2018), intelligent protection of engineering
+                                        bacteria technical safety (E.co-Lock, 2014), and automatic elimination of low-yield
+                                        engineering bacteria (P-SLACKiller, 2016), in order to achieve a more intelligent and
+                                        refined cell factory, further energy saving and emission reduction and increase
+                                        production.</p>
+                                    <p>In the application of industrial production, our engineering bacteria can be further
+                                        domesticated to adapt to the industrial production of large fermenter environment, and
+                                        then applied to industrial production. We can increase the negative feedback system to
+                                        improve the stability of the system. According to the different rates and environments
+                                        required for industrial production, we can change or mutagenesis based on the sequence
+                                        library of T7 and σ factors, and modify the critical density of strain for switching
+                                        between growth and production, in order to meet the production needs of different
+                                        products. According to the different target products needed in industrial production, we
+                                        can change the key enzyme sequence after T7 and σ expression system to produce other
+                                        industrial products besides lycopene and hope this strategy more widely used in
+                                        production</p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Reference" name="6">
+                                    <p>[1] 田洪涛. "现代发酵工艺原理与技术." (2007): 14-23.<br>
+                                        [2] 张晓翠,黄世阳,李翔, 等.细菌群体感应机制的动力学建模研究[J].生物物理学 2018,6(2):7-30<br>
+                                        [3] 张晓兵,府伟灵.细菌群体感应系统研究进展[J].中华医院感染学杂志, 2010,20(11):1639-1642.<br>
+                                        [4] YANG Fan,LI Shu-Mei,CHEN Ping,LI Jin-Fen.Measurement of Cell Concentration in
+                                        Fermentation Liquid[J].Chinese Journal of Spectroscopy Laboratory, 2009, 26(06):
+                                        001643-1645.<br>
+                                        [5] Kim EM, Woo HM, Tian T, Yilmaz S, Javidpour P, Keasling JD, Lee TS. Autonomous
+                                        control of metabolic state by a quorum sensing (QS)-mediated regulator for bisabolene
+                                        production in engineered E. coli. Metab Eng. 2017;44:325–336.<br>
+                                        [6] Chen Kequan , Jiang Min, Su Li , Wei Ping. CO2 fixation by Actinobacillus
+                                        succinogenes in succinic acidproduction [J]. Chemical Engineering, 2009, 37
+                                        (1):49-52<br>
+                                    </p>
+                                </el-collapse-item>
+                            </el-collapse>
                         </div>
                     </div>
 
@@ -339,7 +357,9 @@
 <script>
     var app = new Vue({
         el: '#app',
-        data: {},
+        data: {
+            activeName: '1'
+        },
         methods: {}
     })
 </script>
