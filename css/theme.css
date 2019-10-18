@@ -1165,7 +1165,7 @@ Version: 1.0
 }
 .my_popover{
     line-height: 30px;
-    color: #929292;
+    color: blue;
     letter-spacing: 0;
     font-size: 19px;
     font-family: 'Muli', sans-serif;
@@ -3418,7 +3418,7 @@ Version: 1.0
     left: 0;
     bottom: 0;
     content: '';
-    background: url(../resource/Team/Introduction/slide_back.png) no-repeat center center;
+    background: url(https://2019.igem.org/wiki/images/f/fc/T--BIT-China--resource_Team_Introduction_slide_back.png) no-repeat center center;
     width: 100%;
     height: 174px;
     z-index: -1;
