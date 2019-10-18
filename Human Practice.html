@@ -1,0 +1,407 @@
+{{Template:BIT-China/navigator/HTML}}
+<html>
+<head>
+    <title>Background</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <style>
+        .blogDetail {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail h3 {
+            font-size: 35px !important;
+            line-height: 60px !important;
+            margin: 0 0 20px;
+        }
+
+        .blogDetail h3 a {
+            color: #222222;
+            display: inline-block;
+        }
+
+        .blogDetail h3 a:hover {
+            color: #8180e0;
+        }
+
+        .blogDetail h1 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail h2 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail p {
+            margin: 0 0 28px !important;
+            line-height: 30px !important;
+            font-size: 19px !important;
+        }
+
+        .blogDetail .author {
+            display: inline-block;
+            float: left;
+            font-size: 19px !important;
+            color: #222222 !important;
+            line-height: 30px !important;
+            font-weight: 400 !important;
+            margin: 0 0 0;
+        }
+
+        .blogDetail .author span {
+            color: #8180e0 !important;
+            font-weight: 700 !important;
+        }
+
+        .blogDetail a.view_detail {
+            display: inline-block;
+            float: right;
+            font-size: 19px !important;
+            line-height: 30px !important;
+            color: #8180e0;
+            margin: 0;
+        }
+
+        .blogDetail a.view_detail:hover {
+            color: #222;
+        }
+
+        .list p {
+            color: #929292 !important;
+            margin: 0 15px 0 0 !important;
+            padding: 0 !important;
+            font-size: 15px !important;
+            display: none !important;
+            line-height: 1 !important;
+        }
+
+        .list:hover p {
+            display: block !important;
+            animation: text-show 1s !important;
+            -moz-animation: text-show 1s !important; /* Firefox */
+            -webkit-animation: text-show 1s !important; /* Safari 和 Chrome */
+            -o-animation: text-show 1s !important; /* Opera */
+        }
+
+        .list-item:hover > p {
+            color: black !important;
+            font-size: 19px !important;
+            color: black;
+        }
+
+        .el-collapse-item__header {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .el-collapse-item__content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .el-collapse-item__content h4 {
+            margin-top: 10px;
+        }
+
+        .el-collapse-item__content p {
+            margin: 0 !important;
+        }
+
+        .el-collapse-item__header {
+            font-size: 2rem !important;
+            color: #929292 !important;
+            height: 80px !important;
+            letter-spacing: 0 !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            line-height: 40px !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .el-collapse-item__content p {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail a {
+            color: blue !important;
+        }
+
+        .blogDetail img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .img-center {
+            text-align: center;
+        }
+
+    </style>
+
+
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/bootstrap.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/font-awesome.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/payloan-icon/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/icofont/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/animate/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/settings/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/slick/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.carousel/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/preset/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/responsive/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/autoMenu/CSS?action=raw&ctype=text/css">
+
+</head>
+<body class="bg_right">
+<!-- Preloading -->
+<div id="app">
+    <div class="preloader text-center">
+        <div class="la-ball-circus la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <section class="commonSection blogPage">
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-8">
+                    <div class="singleBlog">
+                        <h1>Collaborations</h1>
+                        <div class="blogDetail">
+                            <el-collapse v-model="activeName">
+                                <el-collapse-item title="Integrated Human Practices -Visited COFCO and exchanged views"
+                                                  name="1">
+                                    <p>The Research Institute of Nutrition and Health of China Food Group Co., Ltd. is
+                                        the first enterprise-oriented research center in China to systematically study
+                                        the nutritional needs and metabolic mechanism of Chinese people in order to
+                                        realize the health needs of Chinese people. The BIT-China team came to the
+                                        Institute of Nutrition and Health of COFCO for an exchange meeting on July 26,
+                                        2019.</p>
+                                    <p>
+                                        We visited the Institute of Nutrition and Health of China Food and Agriculture
+                                        to understand its strong scientific research strength and recognize each other's
+                                        professionalism. We introduced our project to the researchers of the institute,
+                                        including team history, project background, project design, modeling design and
+                                        project significance. They asked some questions about the project, pointed out
+                                        the shortcomings (such as simple circuit design, wide application of quorum
+                                        sensing system, etc.) and put forward corresponding guidance. We asked them how
+                                        they could convert laboratory products into products that could be produced on a
+                                        large scale in factories, and raised some questions in ordinary industrial
+                                        production processes (such as common fermentation methods, cost ratio of
+                                        inducers, factors affecting industrial production output, etc.) as well as the
+                                        current market situation of lycopene.</p>
+                                    <p>
+                                        COFCO Nutrition and Health Research Institute is also conducting research on
+                                        nutritional products, and as a research and development center with enterprises
+                                        as the main body, its researchers have unique and refined views on how to
+                                        transform laboratory products into industrial mass-produced products. Their
+                                        opinions and answers are of great help to the design and improvement of our
+                                        project. After the meeting, we realized the current shortcomings of the project
+                                        and the corresponding improvement direction, and carried out more in-depth
+                                        thinking to make it more perfect. At the same time, our introduction also
+                                        provides some new ideas and inspiration for the staff of the Institute of
+                                        Nutrition and Health of COFCO.
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/c/c3/T--BIT-China--human-practice-1.png">
+                                    <img src="https://2019.igem.org/wiki/images/0/03/T--BIT-China--human-practice-2.png">
+                                </el-collapse-item>
+                                <el-collapse-item title="Human Practices— 2019 iGEM Beijing District Meet-up（2019.7.7）"
+                                                  name="2">
+                                    <p>
+                                        As did every other team, we presented our designs and the progress we’d made by
+                                        then to other teams. We made an analogy as a lead-in story for others’ better
+                                        understanding of our objectives. We also shared our design of utilizing quorum
+                                        sensing and T7 promotor as two parts of our system. And as a matter of fact,
+                                        modeling is part that other teams were most intrigued in. Besides, we proposed
+                                        our final goal of constructing an intellectual cell factory, combining our
+                                        projects from past few years. Moreover, we learned a great lot from other teams
+                                        who had partial same goal as we did and who also made ingenious proposal of
+                                        various methods.</p>
+                                    <p>
+                                        After presentation, we had sufficient time for exchanging ideas with other
+                                        teams, which enriched our understanding of many technological methodologies and
+                                        gained us further view of our own design. We had fruitful discussion with teams
+                                        who had innovative thoughts for solving their problems and our shared problems.
+                                        And yet new challenges were also generated from those conversations. It’s always
+                                        a pleasant time as we proposed rushing ideas and tried to fit them into future
+                                        views.</p>
+                                    <p>
+                                        It’s, no doubt, a great fortune to us that we found people who had
+                                        ingeniously-designed parts that would work perfectly for our purpose too. And
+                                        it’s even a greater joy that we also had something they wanted all along. For
+                                        such reasons we build collaborations with other teams and looked forward to
+                                        working together in the very soon future. It’s also a great honor that we had a
+                                        very knowledgable iGem Ambassador, Dorothy Zhang, in Beijing meeting. Based on
+                                        our presentation, she gave us earnest advice, on presenting our ideas and on
+                                        developing our thoughts.
+
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/2/22/T--BIT-China--human-practice-3.png">
+                                    <img src="https://2019.igem.org/wiki/images/8/8b/T--BIT-China--human-practice-4.png">
+                                    <img src="https://2019.igem.org/wiki/images/e/ee/T--BIT-China--human-practice-5.png">
+                                </el-collapse-item>
+                                <el-collapse-item
+                                        title="Integrated Human Practices—Conference of China iGEMer Community"
+                                        name="3">
+                                    <p>
+                                        Our team sent three students to participate in the 6th Conference of China
+                                        iGEMer Community. We made a presentation at the conference and displayed
+                                        posters.</p>
+                                    <p>
+                                        During the meeting, many questions were raised about our project. It said that
+                                        T7 strength is not high enough to express the rate-limiting enzyme, and audience
+                                        made many suggestions for the design.</p>
+                                    <p>
+                                        In response to the controversy over the strength of the T7 promoter, we have
+                                        consulted various data. We believe that the "domesticated" T7 promoter in the
+                                        laboratory is still strong enough to express enough rate-limiting enzymes.</p>
+                                    <p>
+                                        In design, we consider the suggestions by other teams. We decided to divide the
+                                        all genes into two and build it on the “control plasmid” and the “production
+                                        plasmid”.
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/0/07/T--BIT-China--human-practice-6.jpg">
+                                </el-collapse-item>
+                                <el-collapse-item title="Public Engagement-Announcement of Nanling Middle School"
+                                                  name="4">
+                                    <p> Our team's member Fang returned to his alma mater, Nanling Middle School in the
+                                        countryside during the summer vacation. There are many children living a hard
+                                        life, but they dream of going to college and becoming scientists. Fang delivered
+                                        a brief speech, mainly about his college life and the iGEM competition. He
+                                        introduced synthetic biology to high school students with his high school
+                                        knowledge. Fang said, "Although they can't fully understand it, they think it's
+                                        interesting and maybe one day they will take part in the iGEM competition. "</p>
+                                    <p>
+                                        In China, biology is considered a difficult profession to find a job, so it is
+                                        difficult for them to get their parents to agree to study biology in university.
+                                        And our public education is to change this situation and let biological
+                                        knowledge penetrate into these economically underdeveloped areas.
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/d/d1/T--BIT-China--human-practice-7.jpg">
+                                </el-collapse-item>
+                                <el-collapse-item title="Human Practice - iGEM Beijing Regional Exchange" name="5">
+                                    <p>On August 6, BIT-China 2019 was honored to host the iGEM Meetup in Beijing.</p>
+                                    <p> Beijing is not only the capital of China, but also the academic and cultural
+                                        center.
+                                        There are a large number of top iGEM teams in China. Frontier and amazing ideas
+                                        and
+                                        projects are blooming here. This meeting contributes to the collaboration and
+                                        communication of the iGEM community.</p>
+                                    <p>Thanks for the participation of these teams, <a
+                                            href="https://2019.igem.org/Team:Peking/Collaborations">Peking</a>,
+                                        <a href="https://2019.igem.org/Team:Tsinghua-A/Collaborations">Tsinghua-A</a>,
+                                        <a href="https://2019.igem.org/Team:Tinghua/Collaborations">Tsinghua</a>,
+                                        <a href="https://2019.igem.org/Team:OUC-China/Collaborations">OUC-China</a>,
+                                        <a href="https://2019.igem.org/Team:CAU_China/Collaborations">CAU-China</a>,
+                                        <a href="https://2019.igem.org/Team:BNU-China/Collaborations">BNU-China</a> and
+                                        <a href="https://2019.igem.org/Team:UCAS-China/Collaborations">UCAS-China</a>.
+                                        We look forward to seeing you again in Boston！</p>
+                                    <p>We learned a lot from the Meetup. From the instructor of the Peking University
+                                        team, we
+                                        learned that there were some problems in the design of the experiment, and the
+                                        project
+                                        was not smart enough. We conducted a survey on this and proposed the design of
+                                        the
+                                        negative feedback circuit. We also discussed the improvement suggestions based
+                                        on his
+                                        suggestions, and determined the scheme of the control group. The fluorescence
+                                        characterization was
+                                        compared with the experimental group to improve our project.</p>
+                                    <p>In the future, we plan to produce lycopene to verify the our work and discuss the
+                                        relationship with the astaxanthin line of China Agricultural University to
+                                        promote
+                                        exchanges
+                                        and cooperation in Beijing.</p>
+                                    <img src="https://2019.igem.org/wiki/images/5/55/T--BIT-China--collaboration-1.png">
+                                    <img src="https://2019.igem.org/wiki/images/9/90/T--BIT-China--collaboration-2.png">
+                                </el-collapse-item>
+                            </el-collapse>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="autoMenu"></div>
+
+</div>
+
+
+<script src="https://2019.igem.org/Template:BIT-China/jquery/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/bootstrap.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.revolution.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.tools.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery-ui/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/shuffle/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/slick/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/gmaps/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/owl.carousel/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/theme/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/vue/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/element/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/autoMenu/Javascript?action=raw&ctype=text/javascript"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            activeName: ''
+        },
+        methods: {}
+    })
+</script>
+
+<script>
+    window.onload = autoMenu();
+    document.getElementById("autoMenu").style.display = 'none';
+</script>
+</body>
+</html>
