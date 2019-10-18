@@ -18,24 +18,49 @@
     width: 40vw;
     height: 17vw;
     margin-left: 32vw;
+    background-color: transparent !important;
+}
+
+.el-button {
+    display: none;
 }
 
 .el-calendar__header {
     padding-top: 2px;
     padding-bottom: 2px;
+    border-bottom: none;
 }
 
 .el-calendar__body {
     padding-top: 2px;
 }
 
+.el-calendar-table tr td:first-child {
+    border-left: none;
+}
+
+.el-calendar-table tr:first-child td{
+    border-top: none;
+}
+
+.el-calendar-table td{
+    border-bottom: none;
+    border-right: none;
+}
+
 .el-calendar-day {
     height: 2vw !important;
 }
 
-.el-calendar-day p{
+.el-calendar-day p {
     margin: 0;
 }
+
+/*红圈*/
+/*.is-selected > .el-calendar-day > p{*/
+/*    border: red 5px solid;*/
+/*    border-radius: 5px;*/
+/*}*/
 
 embed {
     margin-top: 2vw;
