@@ -83,14 +83,16 @@
     </ul>
 </header>
 <div class="experiment_content" id="app">
-    <el-date-picker
-            v-model="date"
-            type="date"
-            placeholder="Pick date"
-            value-format="yyyyMMdd"
-            class="date-picker">
-    </el-date-picker>
-    <br/>
+    <div class="date-picker-before"></div>
+    <el-calendar v-model="date">
+        <template
+                slot="dateCell"
+                slot-scope="{date, data}">
+            <p>
+                {{ data.day.split('-')[2] }} {{ data.isSelected ? '✔️' : ''}}
+            </p>
+        </template>
+    </el-calendar>
     <embed :src="src">
 </div>
 <script>
@@ -124,16 +126,27 @@
         {
             el: '#app',
             data: {
-                date: '',
+                date: ''
             },
             computed: {
                 src: function () {
-                    console.log(this.date);
+                    let date = formatDate(this.date);
+                    console.log(date);
                     return 'doc/详细设计说明书-BIT攻城狮.pdf';
                 }
             }
         }
-    )
+    );
+
+    function formatDate(str) {
+        let date = new Date(str);
+        let y = date.getFullYear();
+        let m = date.getMonth() + 1;
+        m = m < 10 ? ('0' + m) : m;
+        let d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        return y + '-' + m + '-' + d;
+    }
 </script>
 </body>
 </html>

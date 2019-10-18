@@ -10,13 +10,35 @@
     text-align: center;
 }
 
-.date-picker {
-    margin-left: 5vw;
-    margin-top: 35vw;
+.date-picker-before {
+    height: 26vw;
+}
+
+.el-calendar {
+    width: 40vw;
+    height: 17vw;
+    margin-left: 32vw;
+}
+
+.el-calendar__header {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.el-calendar__body {
+    padding-top: 2px;
+}
+
+.el-calendar-day {
+    height: 2vw !important;
+}
+
+.el-calendar-day p{
+    margin: 0;
 }
 
 embed {
-    margin-top: 8vw;
+    margin-top: 2vw;
     margin-left: 5vw;
     width: 55vw;
     height: 48vw;
