@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <title>Experiment</title>
     <script src="js/Utils/vue.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <!--    <script src="js/element.js"></script>-->
-    <!--    <link rel="stylesheet" href="css/element.css">-->
+    <!--    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+    <!--    <script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+    <!--    <script src="https://unpkg.com/element-ui/lib/umd/locale/en.js"></script>-->
+    <link rel="stylesheet" href="css/element.css">
+    <script src="js/element.js"></script>
+    <script src="js/en.js"></script>
+
     <link rel="stylesheet" href="css/navigator.css">
     <link rel="stylesheet" href="css/Experiment.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/en.js"></script>
 </head>
 <body>
 <header>
@@ -120,8 +125,15 @@
         }
         document.getElementsByClassName("header_icon")[0].style.transform = 'rotate(' + current + 'deg)';
     }
+
+    $(window).resize(function () {
+        if ($(window).width() > 1200) {
+            document.getElementsByClassName("hList")[0].style.display = "block";
+        }
+    })
 </script>
 <script>
+    ELEMENT.locale(ELEMENT.lang.en);
     let app = new Vue(
         {
             el: '#app',

@@ -22,7 +22,14 @@
 }
 
 .el-button {
-    display: none;
+    background-color: transparent;
+    cursor: pointer !important;
+}
+
+.el-button:hover {
+    border: transparent;
+    cursor: pointer !important;
+    color: black;
 }
 
 .el-calendar__header {
@@ -39,11 +46,11 @@
     border-left: none;
 }
 
-.el-calendar-table tr:first-child td{
+.el-calendar-table tr:first-child td {
     border-top: none;
 }
 
-.el-calendar-table td{
+.el-calendar-table td {
     border-bottom: none;
     border-right: none;
 }
@@ -55,12 +62,6 @@
 .el-calendar-day p {
     margin: 0;
 }
-
-/*红圈*/
-/*.is-selected > .el-calendar-day > p{*/
-/*    border: red 5px solid;*/
-/*    border-radius: 5px;*/
-/*}*/
 
 embed {
     margin-top: 2vw;
