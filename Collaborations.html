@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <style>
+        .blogDetail {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail h3 {
+            font-size: 35px !important;
+            line-height: 60px !important;
+            margin: 0 0 20px;
+        }
+
+        .blogDetail h3 a {
+            color: #222222;
+            display: inline-block;
+        }
+
+        .blogDetail h3 a:hover {
+            color: #8180e0;
+        }
+
+        .blogDetail h1 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail h2 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail p {
+            margin: 0 0 28px !important;
+            line-height: 30px !important;
+            font-size: 19px !important;
+        }
+
+        .blogDetail .author {
+            display: inline-block;
+            float: left;
+            font-size: 19px !important;
+            color: #222222 !important;
+            line-height: 30px !important;
+            font-weight: 400 !important;
+            margin: 0 0 0;
+        }
+
+        .blogDetail .author span {
+            color: #8180e0 !important;
+            font-weight: 700 !important;
+        }
+
+        .blogDetail a.view_detail {
+            display: inline-block;
+            float: right;
+            font-size: 19px !important;
+            line-height: 30px !important;
+            color: #8180e0;
+            margin: 0;
+        }
+
+        .blogDetail a.view_detail:hover {
+            color: #222;
+        }
+
+        .list p {
+            color: #929292 !important;
+            margin: 0 15px 0 0 !important;
+            padding: 0 !important;
+            font-size: 15px !important;
+            display: none !important;
+            line-height: 1 !important;
+        }
+
+        .list:hover p {
+            display: block !important;
+            animation: text-show 1s !important;
+            -moz-animation: text-show 1s !important; /* Firefox */
+            -webkit-animation: text-show 1s !important; /* Safari 和 Chrome */
+            -o-animation: text-show 1s !important; /* Opera */
+        }
+
+        .list-item:hover > p {
+            color: black !important;
+            font-size: 19px !important;
+            color: black;
+        }
+
+        .el-collapse-item__header {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .el-collapse-item__content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .el-collapse-item__content h4 {
+            margin-top: 10px;
+        }
+
+        .el-collapse-item__content p {
+            margin: 0 !important;
+        }
+
+        .el-collapse-item__header {
+            font-size: 2rem !important;
+            color: #929292 !important;
+            height: 80px !important;
+            letter-spacing: 0 !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            line-height: 40px !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .el-collapse-item__content p {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail a {
+            color: blue;
+        }
+
+        .blogDetail img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .img-center {
+            text-align: center;
+        }
+    </style>
+
+
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/bootstrap.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/font-awesome.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/payloan-icon/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/icofont/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/animate/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/settings/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/slick/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.carousel/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/preset/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/responsive/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/autoMenu/CSS?action=raw&ctype=text/css">
+
+</head>
+<body class="bg_right">
+<!-- Preloading -->
+<div id="app">
+    <div class="preloader text-center">
+        <div class="la-ball-circus la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Common Section -->
+    <section class="commonSection blogPage">
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-8">
+                    <div class="singleBlog">
+                        <h1>Collaborations</h1>
+                        <div class="blogDetail">
+                            <el-collapse v-model="activeName">
+                                <el-collapse-item title="Human Practice - iGEM Beijing Regional Exchange" name="1">
+                                    <p>On August 6, BIT-China 2019 was honored to host the iGEM Meetup in Beijing.</p>
+                                    <p> Beijing is not only the capital of China, but also the academic and cultural
+                                        center.
+                                        There are a large number of top iGEM teams in China. Frontier and amazing ideas
+                                        and
+                                        projects are blooming here. This meeting contributes to the collaboration and
+                                        communication of the iGEM community.</p>
+                                    <p>Thanks for the participation of these teams, <a
+                                            href="https://2019.igem.org/Team:Peking/Collaborations">Peking</a>,
+                                        <a href="https://2019.igem.org/Team:Tsinghua-A/Collaborations">Tsinghua-A</a>,
+                                        <a href="https://2019.igem.org/Team:Tinghua/Collaborations">Tsinghua</a>,
+                                        <a href="https://2019.igem.org/Team:OUC-China/Collaborations">OUC-China</a>,
+                                        <a href="https://2019.igem.org/Team:CAU_China/Collaborations">CAU-China</a>,
+                                        <a href="https://2019.igem.org/Team:BNU-China/Collaborations">BNU-China</a> and
+                                        <a href="https://2019.igem.org/Team:UCAS-China/Collaborations">UCAS-China</a>.
+                                        We look forward to seeing you again in Boston！</p>
+                                    <p>We learned a lot from the Meetup. From the instructor of the Peking University
+                                        team, we
+                                        learned that there were some problems in the design of the experiment, and the
+                                        project
+                                        was not smart enough. We conducted a survey on this and proposed the design of
+                                        the
+                                        negative feedback circuit. We also discussed the improvement suggestions based
+                                        on his
+                                        suggestions, and determined the scheme of the control group. The fluorescence
+                                        characterization was
+                                        compared with the experimental group to improve our project.</p>
+                                    <p>In the future, we plan to produce lycopene to verify the our work and discuss the
+                                        relationship with the astaxanthin line of China Agricultural University to
+                                        promote
+                                        exchanges
+                                        and cooperation in Beijing.</p>
+                                    <img src="https://2019.igem.org/wiki/images/5/55/T--BIT-China--collaboration-1.png">
+                                    <img src="https://2019.igem.org/wiki/images/9/90/T--BIT-China--collaboration-2.png">
+                                </el-collapse-item>
+                                <el-collapse-item title="Collaboration with Tsinghua"
+                                                  name="2">
+                                    <p>
+                                        As iGEMers and SynBio researchers, we believe that Synthetic Biology is more
+                                        than
+                                        creating on our own. Indeed, it’s about sharing the resources, ideas, and
+                                        brainchildren
+                                        among
+                                        teams of researchers. Therefore, we are more than glad to establish
+                                        collaboration with
+                                        other
+                                        teams not just because we can benefit each other through exchanging parts but we
+                                        would
+                                        also
+                                        exchange ideas and insights into one another’s project so that we grow together.
+                                        Based
+                                        on this belief, when our team learnt about NEON, the design of <a
+                                            href="https://2019.igem.org/Team:Tinghua/Collaborations">Tsinghua</a> from
+                                        last
+                                        year, and excitingly found out that they created exactly what we needed to
+                                        prevent
+                                        leakage, we got
+                                        in touch with their current team members immediately and sought for establishing
+                                        further
+                                        collaboration.
+                                    </p>
+                                    <p>
+                                        We first discussed the details of their last year’s project through texts,
+                                        setting a
+                                        meeting
+                                        for both teams to have deeper communication. On Sep. 28th, 2019, the day of the
+                                        meeting,
+                                        we
+                                        learnt all the information we needed for incorporating their parts (the plasmid
+                                        called
+                                        safety catch, primarily) into our system. Afterwards, we held a discussion based
+                                        on the
+                                        projects we were currently working on. Surprisingly, we found many difficulties
+                                        that we
+                                        faced in common such as how to assemble two fragments of DNA effectively. And to
+                                        some
+                                        extent, we both offered helpful advice on how to partially deal with the
+                                        problems.
+                                        Moreover,
+                                        advisors of Tsinghua iGEM 2019 shared with us some of the point-mutations they
+                                        experimented
+                                        on, which was great help for efficaciously developing their parts in our system.
+                                    </p>
+                                    <p>All in all, the collaboration is an enjoyable journey we share for we not only
+                                        recognize
+                                        the
+                                        significance of what we both are working on while pointing out certain
+                                        shortcomings that
+                                        require further endeavors, but also genuinely feel that, as iGEMers, we are
+                                        never alone
+                                        as
+                                        isolated islands but pieces of rich lands connected to each other by multiple
+                                        bridges.
+                                        It is
+                                        vitally important, indeed, that we support one another, push forward, and gain
+                                        whatever
+                                        we
+                                        gain as a whole.
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/9/97/T--BIT-China--collaboration-3.png"
+                                         style="width: 40%">
+                                </el-collapse-item>
+                                <el-collapse-item title="Collaboration with Peking"
+                                                  name="3">
+                                    <p>
+                                        Quorum sensing (QS) system is the core gene circuit of our project, but we tried
+                                        to
+                                        construct it for a month without success. We suspect there were something wrong
+                                        with the
+                                        materials, but we don't know what to do.</p>
+                                    <p>
+                                        Fortunately, we collaborated with the <a
+                                            href="https://2019.igem.org/Team:Peking">Peking</a> to acquire the <a
+                                            href="http://parts.igem.org/Part:BBa_F2620">BBa_F2620</a> and <a
+                                            href="http://parts.igem.org/Part:BBa_K1499500">BBa_K1499500</a>
+                                        which
+                                        have been accurately characterized and rigorously verified by Peking. The LuxI
+                                        gene was
+                                        regained by PCR using these plasmids as templates.</p>
+                                    <p>
+                                        Finally, we succeeded in troubleshooting and constructed the QS genetic circuit.
+                                        Thanks
+                                        for
+                                        the generous help of Peking very much!
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/2/2d/T--BIT-China--collaboration-4.jpg">
+                                </el-collapse-item>
+                                <el-collapse-item title="Collaborations with BIT team" name="4">
+                                    <p> In July 10th,cooperation between <a
+                                            href="https://2019.igem.org/Team:BIT-China/Collaborations">BIT-China</a> and
+                                        <a href="https://2019.igem.org/Team:BIT/Collaborations">
+                                            BIT</a>
+                                        kicked off. We changed our previous
+                                        kit
+                                        Plates in their lab for our subsequent experiments . We provided them with
+                                        plasmid
+                                        containing <a href="http://parts.igem.org/Part: BBa_E0840">BBa_E0840</a> which
+                                        they
+                                        used to construct their plasmid. And they provided us
+                                        with
+                                        plasmid containing <a href="http://parts.igem.org/Part: BBa_C0061">BBa_C0061</a>
+                                        and
+                                        <a href="http://parts.igem.org/Part: BBa_C0062"></a> BBa_C0062 .</p>
+                                    <p>
+                                        In July 18th, they provided us with the E.coli strain containing
+                                        <a href="http://parts.igem.org/Part:BBa_F2620">BBa_F2620</a> and we used
+                                        it to
+                                        build our quorum sensing system which helped us finish our experiment plan
+                                        faster.</p>
+                                    <img src="https://2019.igem.org/wiki/images/1/15/T--BIT-China--collaboration-6.jpg"
+                                         style="margin-bottom: 10px">
+                                    <p>
+                                        In October 3rd and 7th, they shared us the right of using microplate reader
+                                        twice and
+                                        helped
+                                        us measure and verify the experimental results of quorum sensing system and T7
+                                        orthogonal
+                                        expression system. It's a precious opportunity to communicate with each
+                                        other!</p>
+                                    <p style="margin-bottom: 0 !important"> “</p>
+                                    <p style="text-align: center">
+
+                                        <i>-Bernard Shaw said，If you have an apple and I have an apple, and we exchange
+                                            apples,
+                                            we
+                                            both
+                                            still only have one apple.</i></p>
+                                    <p style="text-align: center;margin-bottom: 0 !important">
+                                        <i>-But our leader said，If you have a kit plate and I have a kit plate and we
+                                            exchange
+                                            kit
+                                            plates we each now have two kit plates.</i></p>
+                                    <p style="text-align: end">”</p>
+                                    <img src="https://2019.igem.org/wiki/images/6/6f/T--BIT-China--collaboration-5.png">
+                                    <p style="font-size: small;text-align: center;margin-bottom: 0 !important;">
+                                        Our team leader Yu Fanchen and BIT team member</p>
+                                    <p style="font-size: small;text-align: center">
+                                        Our teammate Yang Huanzhou was standing at the entrance to their lab
+                                    </p>
+                                </el-collapse-item>
+                            </el-collapse>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Common Section -->
+    <div id="autoMenu"></div>
+
+</div>
+
+
+<script src="https://2019.igem.org/Template:BIT-China/jquery/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/bootstrap.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.revolution.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.tools.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery-ui/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/shuffle/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/slick/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/gmaps/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/owl.carousel/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/theme/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/vue/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/element/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/autoMenu/Javascript?action=raw&ctype=text/javascript"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            activeName: '1'
+        },
+        methods: {}
+    })
+</script>
+
+<script>
+    window.onload = autoMenu();
+    document.getElementById("autoMenu").style.display = 'none';
+</script>
+</body>
+</html>
