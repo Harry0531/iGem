@@ -1,0 +1,23 @@
+.experiment_content {
+    margin-top: 100px;
+    width: 100%;
+    height: 200vh;
+    background-image: url("../photo/Experiment/资源 23@2x-.png");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    background-size: 100vw;
+    text-align: center;
+}
+
+.date-picker {
+    margin-left: 5vw;
+    margin-top: 35vw;
+}
+
+embed {
+    margin-top: 8vw;
+    margin-left: 5vw;
+    width: 55vw;
+    height: 48vw;
+}
