@@ -42,7 +42,8 @@
         </li>
         <li>
             <div class="menu">
-                <h1 class="menu-title menu-title_4th"><a href="https://2019.igem.org/Team:BIT-China/Parts">Parts</a></h1>
+                <h1 class="menu-title menu-title_4th"><a href="https://2019.igem.org/Team:BIT-China/Parts">Parts</a>
+                </h1>
                 <ul class="menu-dropdown"></ul>
             </div>
         </li>
@@ -54,19 +55,22 @@
         </li>
         <li>
             <div class="menu">
-                <h1 class="menu-title menu-title_2nd"><a href="https://2019.igem.org/Team:BIT-China/Human_Practices" style="font-size: small">Human Practices</a></h1>
+                <h1 class="menu-title menu-title_2nd"><a href="https://2019.igem.org/Team:BIT-China/Human_Practices"
+                                                         style="font-size: small">Human Practices</a></h1>
                 <ul class="menu-dropdown"></ul>
             </div>
         </li>
         <li>
             <div class="menu">
-                <h1 class="menu-title menu-title_3rd"><a href="https://2019.igem.org/Team:BIT-China/Safety">Safety</a></h1>
+                <h1 class="menu-title menu-title_3rd"><a href="https://2019.igem.org/Team:BIT-China/Safety">Safety</a>
+                </h1>
                 <ul class="menu-dropdown"></ul>
             </div>
         </li>
         <li>
             <div class="menu">
-                <h1 class="menu-title menu-title_4th"><a href="https://igem.org/2019_Judging_Form?id=2972">Judging form</a></h1>
+                <h1 class="menu-title menu-title_4th"><a href="https://igem.org/2019_Judging_Form?id=2972">Judging
+                    form</a></h1>
                 <ul class="menu-dropdown"></ul>
             </div>
         </li>
@@ -98,6 +102,12 @@
         }
         document.getElementsByClassName("header_icon")[0].style.transform = 'rotate(' + current + 'deg)';
     }
+
+    $(window).resize(function () {
+        if ($(window).width() > 1200) {
+            document.getElementsByClassName("hList")[0].style.display = "block";
+        }
+    })
 </script>
 </body>
 </html>
