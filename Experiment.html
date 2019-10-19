@@ -100,12 +100,15 @@
         </template>
     </el-calendar>
     <embed :src="src">
-    <el-dialog
-            title=""
-            :visible.sync="dialogVisible"
-            :fullscreen="true">
-        <video height="600" src="resource/printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>
-    </el-dialog>
+<!--    <el-dialog-->
+<!--            title=""-->
+<!--            :visible.sync="dialogVisible"-->
+<!--            :fullscreen="true">-->
+<!--        <video height="600" src="resource/printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>-->
+<!--    </el-dialog>-->
+    <div id="aaa">
+        <video height="1500" src="resource/printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>
+    </div>
 </div>
 <script>
     var show = false;
@@ -170,7 +173,11 @@
                     if (isNaN(date.split('-')[0]))
                         return '';
                     // this.dialogVisible = true;
-                    this.videoFunction();
+                    // this.videoFunction();
+                    document.getElementById("aaa").style.display="block";
+                    setTimeout(function () {
+                        document.getElementById("aaa").style.display="none";
+                    }, 4.182 * 1000);
                     return 'doc/详细设计说明书-BIT攻城狮.pdf';
                 }
             }
