@@ -87,6 +87,7 @@
         </li>
     </ul>
 </header>
+
 <div class="experiment_content" id="app">
     <div class="date-picker-before"></div>
     <el-calendar v-model="date">
@@ -99,6 +100,12 @@
         </template>
     </el-calendar>
     <embed :src="src">
+    <el-dialog
+            title=""
+            :visible.sync="dialogVisible"
+            :fullscreen="true">
+        <video height="600" src="resource/printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>
+    </el-dialog>
 </div>
 <script>
     var show = false;
@@ -133,17 +140,37 @@
     })
 </script>
 <script>
+    let video = document.getElementById("vid");
+    video.onended = function () {
+        app.dialogVisible = false;
+    };
+
+
     ELEMENT.locale(ELEMENT.lang.en);
     let app = new Vue(
         {
             el: '#app',
             data: {
-                date: ''
+                date: '',
+                dialogVisible: false,
+                video: video
+            },
+            methods: {
+                videoFunction: function () {
+                    this.video.currentTime = 0;
+                    this.dialogVisible = true;
+                    setTimeout(function () {
+                        app.dialogVisible = false;
+                    }, 4.182 * 1000);
+                }
             },
             computed: {
                 src: function () {
                     let date = formatDate(this.date);
-                    console.log(date);
+                    if (isNaN(date.split('-')[0]))
+                        return '';
+                    // this.dialogVisible = true;
+                    this.videoFunction();
                     return 'doc/详细设计说明书-BIT攻城狮.pdf';
                 }
             }
