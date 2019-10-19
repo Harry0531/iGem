@@ -328,6 +328,27 @@
         });
     }
 
+    if ($('.team_slider5').length > 0) {
+        $('.team_slider5').slick({
+            autoplay: false,
+            autoplaySpeed: 2000,
+            slidesToShow: 1,
+            dots: false,
+            arrows: true,
+            centerMode: true,
+            asNavFor: '.slider-nav5',
+            centerPadding: '0'
+        });
+
+        $('.slider-nav5').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            asNavFor: '.team_slider5',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    }
     /*--------------------------------------------------------
      / 10. Loan Calculation
      /--------------------------------------------------------*/
