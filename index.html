@@ -5,250 +5,108 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
+        .header_bg_1 .welcome_text p .contactArea p{
+            color: #929292 !important;
+            font-size: 19px !important;
         }
-        #content{
-            margin-top: -8px;
-            width: 100%;
-            margin-left: 0;
-            padding: 0;
-            margin-right: 0;
+        #HQ_page p{
+            font-size: 19px !important;
         }
-        #mw-content-text{
-            background:url("https://2019.igem.org/wiki/images/6/6a/T--BIT-China--index_background.jpg")
-        }
-        #top_title{
-            display: none;
-        }
-        .mw-content-ltr ul{
-            margin: 0;
-        }
-        .nav_wrapper li {
-            margin-bottom: 0;
-        }
-        body{
-            font-size: small;
-            padding: 0;
-            margin: 0;
-            height: 1000px;
-        }
-        #title{
-            width: 100%;
-            margin-top: 50px;
-        }
-        #title h1{
-            text-align: center;
-            height: 50px;
-            font-size: 50px;
-            color: #3c414b;
-            font-weight: bolder;
-            margin:20px 0 20px 0 ;
-        }
-        #title p{
-            text-align: left;
-            width: 70%;
-            position: relative;
-            left: 15%;
-            font-size: 1.6em;
-            padding:3px 3px 1px 1px;
-            color: rgba(110, 118, 128, 0.9);
-        }
-        #subTitle{
-            margin-top: 30px;
-            width: 60%;
-            position: relative;
-            left: 20%;
-            height: 400px;
-        }
-        .subTitle_icon{
-            width: 30%;
-            float: left;
-            height: 100%;
-            margin-left: 3%;
-        }
-        .subTitle_icon h1{
-            text-align: center;
-            color: rgb(93, 183, 207);
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-        .subTitle_icon p{
-            font-size: 1.2em;
-            text-align: center;
-            width: 80%;
-            position: relative;
-            left: 10%;
-            color: rgba(110, 118, 128, 0.9);
-        }
-        .subTitle_border{
-            /*border:solid 2px rgb(93,183,207);*/
-            border-radius: 50%;
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: relative;
-            width: 50%;
-            left: 25%;
-            height: 40%;
-        }
-
-
-        #navigator {
-            display: flex;
-            justify-content: space-around;
-            background-color: #000000;
-            height: 40px;
-        }
-
-        #logo {
-            width: 0;
-            height: 100%;
-        }
-
-        a:visited {
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav_wrapper {
-            text-align: center;
-        }
-
-        ul {
-            text-align: left;
-            display: inline-block;
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .nav_wrapper li {
-            float: left;
-            padding: .6em 1.5em;
-            background-color: black;
-            color: white;
-            cursor: pointer;
-            -webkit-transition: all .3s;
-            transition: all .3s;
-            position: relative;
-            height: 20px;
-        }
-
-        .nav_wrapper li:hover {
-            background-color: deepPink;
-        }
-
-        li ul {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 250px;
-            display: none;
-            z-index: 1;
-        }
-
-        li ul li {
-            width: 100%;
-        }
-
-        li:hover ul {
-            display: block;
-        }
-
-        li.has-submenu:after {
-            content: "\25bc";
-            font-size: .7em;
-            padding-left: 5px;
-            vertical-align: middle;
-        }
-
-        li.has-submenu:hover:after {
-            content: "\25b2";
-        }
-
     </style>
+
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/bootstrap.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/font-awesome.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/payloan-icon/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/icofont/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/animate/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/settings/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/slick/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/owl.theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/owl.carousel/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/preset/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/responsive/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
 </head>
-<body background="https://2019.igem.org/wiki/images/6/6a/T--BIT-China--index_background.jpg">
+<body>
+    <div>
+        <section class="payloan_header_bg header_bg_1" style="  background: url(resource/index/4.png) no-repeat !important;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="welcome_area">
+                            <div class="welcome_text">
+                                <h1><span>Limited</span> resources<br> how to manage?</h1>
+                                <p>Resources are limited.In the field of microbial fermentation industry, resources are mainly utilized by engineering bacteria to grow or produce fine chemicals. The resources that bacteria use for growth are indispensable, but the more resources are used for cell-growth, the less resources are used for product-synthesis by engineering microbial cells..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header_img">
+                            <img src="images/slider/2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="payloan_header_bg header_bg_1" style="background: url(https://2019.igem.org/wiki/images/c/c9/T--BIT-China--resource_index_background_2.png) no-repeat !important" >
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="header_img">
+                            <img src="images/slider/2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="welcome_area">
+                            <div class="welcome_text">
+                                <h1 style="line-height: 50px;font-size: 35px !important;">Let nature take its course, but it's not efficient enough.</h1>
+                                <h1 style="line-height: 50px;font-size: 35px !important;">Control the nature, but it's not economical enough.</h1>
+                                <h1 ><span>How to change?</span></h1>
+                                <p>The conventional fermentation method is that let the engineering bacteria grow and produce at the same time. But this production mode is not efficient, because production will bring growth pressure to cells. People have also tried to use inducers to control the cell-growth and product-synthesis of microbial cells. But the cost of inducer is too expensive and not economical.</p>
+                            </div>
 
-<div id="navigator" role="navigation">
-    <a href="" id="logo"><img src="resource/navigator/logo.jpg" style="height: 100%;"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <ul class="nav_wrapper">
-        <li class="has-submenu"><a href="">Team</a>
-            <ul>
-                <li><a href="">Team</a></li>
-                <li><a href="">Collaborations</a></li>
-                <li><a href="">Attributions</a></li>
-                <li><a href="">Gallery</a></li>
-            </ul>
-        </li>
-
-        <li class="has-submenu"><a href="">Project</a>
-            <ul>
-                <li><a href="">Description</a></li>
-                <li><a href="">Design</a></li>
-                <li><a href="">Experiments</a></li>
-                <li><a href="">Notebook</a></li>
-                <li><a href="">Protocols</a></li>
-                <li><a href="">Results</a></li>
-                <li><a href="">Demonstrate</a></li>
-            </ul>
-        </li>
-
-        <li class="has-submenu"><a href="">Parts</a>
-            <ul>
-                <li><a href="">Parts Overview</a></li>
-                <li><a href="">Basic Parts</a></li>
-                <li><a href="">Compromise Parts</a></li>
-                <li><a href="">Parts Collection</a></li>
-                <li><a href="">Improve</a></li>
-            </ul>
-        </li>
-
-        <li class="has-submenu"><a href="">Model</a>
-            <ul>
-                <li><a href="">种群密度模型</a></li>
-                <li><a href="">转录资源分配模型</a></li>
-            </ul>
-        </li>
-
-        <li class="has-submenu"><a href="">Human Practice</a>
-            <ul>
-                <li><a href="">Human Practices</a></li>
-                <li><a href="">Integrated Human Practice</a></li>
-                <li><a href="">Education & Public Engagement</a></li>
-            </ul>
-        </li>
-
-        <li><a href="">Safety</a></li>
-        <li><a href="">Awards</a></li>
-        <li><a href="">Judging Form</a></li>
-
-    </ul>
-</div>
-<div id="title">
-    <h1>Abstract</h1>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transcription is the process in which genes are transformed into RNA. The resources used for transcription in each cell are limited. The resources in cells are first used to produce primary metabolites for cell growth. But most of the time our demand is secondary metabolites of cells, which requires us to reduce the competitiveness of cell growth as much as possible without affecting cell growth, and improve the competitiveness of synthetic products. When cells expand in initial stage, resources are mainly used for growth. When cells grow to an appropriate scale, more resources are used to synthesize target products.</p>
-    <p style="margin-top: 20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The whole system is realized by utilizing resource allocation devices to enable the inhibition of cell synthesis when the cell population density is low, and then the transcriptional resources will be more used for cell growth and the cell growth will be accelerated. When the cell density is high, the transcriptional resource allocation device is activated to allocate more transcriptional resources to cell synthesis, accelerate cell synthesis without affecting the normal growth of cells, and increase the production of cell synthesis.
-    </p>
-</div>
-<div id="subTitle">
-    <div class ="subTitle_icon">
-        <div class="subTitle_border" style="background-image: url(https://2019.igem.org/wiki/images/1/1f/T--BIT-China--index_title1.jpg);"></div>
-        <h1>Title1</h1>
-        <p>This is Title One.Please add your words.</p>
+        <!-- Common section -->
+        <section class="commonSection homeContact" style="background: url(resource/index/22.png) no-repeat !important">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="contactArea">
+                            <h3>Give E.coli the wisdom of resource management, and how we do it.</h3>
+                            <p>We hope that E.coli will have the wisdom to manage resources reasonably and choose independently when to focus on growth and when to focus on production. Do you want to know how we do it? Please check our Description for details.</p>
+                            <a href="http://2019.igem.org/Team:BIT-China/Description" class="common_btn">Description</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="contactThumb">
+                            <img src="images/home/1.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Common section -->
     </div>
-    <div class ="subTitle_icon">
-        <div class="subTitle_border "style="background-image: url(https://2019.igem.org/wiki/images/a/ae/T--BIT-China--index_title2.jpg);"></div>
-        <h1>Title2</h1>
-        <p>This is Title Two.Please add your words.</p>
-    </div>
-    <div class ="subTitle_icon">
-        <div class="subTitle_border" style="background-image: url(https://2019.igem.org/wiki/images/f/f7/T--BIT-China--index_title3.jpg);"></div>
-        <h1>Title3</h1>
-        <p>This is Title Three.Please add your words.</p>
-    </div>
-</div>
+
 </body>
+<script src="https://2019.igem.org/Template:BIT-China/jquery/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/bootstrap.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.revolution.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.tools.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery-ui/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/shuffle/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/slick/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/gmaps/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/owl.carousel/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/theme/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/vue/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/element/Javascript?action=raw&ctype=text/javascript"></script>
 </html>

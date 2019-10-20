@@ -26,32 +26,65 @@
         #b1, #b2, #b3, #b4 {
             opacity: 0;
         }
+        .singleProcess_3 .back p {
+            font-size: 19px !important;
+            line-height: 30px !important;
+            color: #fff !important;
+            margin: 0 !important;
+        }
+        .bannerTitle{
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        .bannerTitle h2{
+            font-size: 48px !important;
+            line-height: 66px !important;
+            color: #222222 !important;
+            margin: 0 0 9px !important;
+        }
+        .bannerTitle p{
+            margin: 0 !important;
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+
+        }
     </style>
 
     <script>
-        let flag = [false, false, false, false, false];
+        let flag = [false, false, false, false, false,false];
         let last = flag;
-        const h1 = 444, h2 = 1444, h3 = 2333, h4 = 3222;
+        const h1 = 444, h2 = 1444, h3 = 2333, h4 = 3222,h5=4111;
         window.addEventListener("scroll", function () {
             let height = $(document).scrollTop();
 
             if (height < h1) {
                 flag[1] = flag[2] = flag[3] = flag[4] = false;
             } else if (height < h2) {
-                flag[2] = flag[3] = flag[4] = false;
+                flag[2] = flag[3] = flag[4] = flag[5]=false;
                 flag[1] = true;
             } else if (height < h3) {
-                flag[1] = flag[3] = flag[4] = false;
+                flag[1] = flag[3] = flag[4] = flag[5] = false;
                 flag[2] = true;
             } else if (height < h4) {
-                flag[1] = flag[2] = flag[4] = false;
+                flag[1] = flag[2] = flag[4] = flag[5]= false;
                 flag[3] = true;
-            } else {
-                flag[1] = flag[2] = flag[3] = false;
+            } else if (height < h5) {
+                flag[1] = flag[2] = flag[3] = flag[5] = false;
                 flag[4] = true;
+            }else{
+                flag[1] = flag[2] = flag[3] = flag[4] = false;
+                flag[5] = true;
             }
 
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 5; i++) {
                 let b = "b" + i.toString();
                 if (flag[i]) {
                     document.getElementById(b).classList.remove("hide");
@@ -251,12 +284,12 @@
                 <div class="team_slider2 text-center">
                     <div class="singleTM">
                         <div class="teamDesc">
-                            <img src="https://2019.igem.org/wiki/images/2/28/T--BIT-China--resource_Team_Introduction_slide_icon.png" alt=""/>
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
                             <p>
-                                Weijie Fang，I Learn engineering in my  univeristy.
-                                <br>Ⅰ feeling the magic of life, so determine to find the secret of life.
-                                <br>I want to Ⅰearn more in iGem and buiⅠd  friendship with you.
-                                <br>
+                                Feeling the magic of life, determined to find the secret of life.<br>
+                                I participated in iGem, hoping to find the answers to the questions in my life.<br>
+                                I am outgoing, optimistic and love making friends.<br>
+                                I like reading books. I hope I can find like-minded friends here.<br>
                                 <br>
                                 <br>
                             </p>
@@ -458,8 +491,13 @@
                     </div>
                     <div class="singleTM">
                         <div class="teamDesc">
-                            <img src="https://2019.igem.org/wiki/images/2/28/T--BIT-China--resource_Team_Introduction_slide_icon.png" alt=""/>
-
+                            <img src="./resource/Team/Introduction/slide_icon.png" alt=""/>
+                            <p>Liu ziyu, sophomore in Beijing Institute of Technology,
+                                majoring in BME. <br>Not expert in experimenting
+                                but always dreaming of becoming an expert.<br> Interested in new media and postor designing.<br>
+                                Feels lucky to meet all the teammates and take prat in this great competition. Has faith in our ability to succeed.</p>
+                            <br>
+                            <br>
                         </div>
                         <div class="detail_TM">
                             <h5>Ziyu Liu</h5>
@@ -504,11 +542,11 @@
         <div class="row" style="margin-top: 120px" id="b5">
             <div class="col-lg-12">
                 <ul class="slider-nav5">
-                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/a/a9/T--BIT-China--resource_Team_Introduction_black.png" alt=""/></li>
+                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/a/a9/T--BIT-China--resource_Team_Introduction_2.png" alt=""/></li>
                     <li role="presentation"><img src="https://2019.igem.org/wiki/images/7/7d/T--BIT-China--resource_Team_Introduction_2.png" alt=""/></li>
-                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/1/14/T--BIT-China--resource_Team_Introduction_zch.png" alt=""/></li>
-                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/9/9f/T--BIT-China--resource_Team_Introduction_wh.png" alt=""/></li>
-                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/3/3d/T--BIT-China--resource_Team_Introduction_black.png" alt=""/></li>
+                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/1/14/T--BIT-China--resource_Team_Introduction_2.png" alt=""/></li>
+                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/9/9f/T--BIT-China--resource_Team_Introduction_2.png" alt=""/></li>
+                    <li role="presentation"><img src="https://2019.igem.org/wiki/images/3/3d/T--BIT-China--resource_Team_Introduction_2.png" alt=""/></li>
                 </ul>
                 <div class="team_slider5 text-center">
                     <div class="singleTM">
@@ -572,27 +610,7 @@
 </section>
 <!-- Common Section -->
 
-<!-- footer section -->
-<footer class="footer">
-    <div class="container">
 
-    </div>
-</footer>
-<!-- footer section -->
-
-<!-- Copyright section -->
-<section class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <p>Copyright <a href="#">Payloan</a>. All rights reserved</p>
-            </div>
-            <div class="col-sm-6 text-right">
-                <a href="#" id="backTo"><i class="flaticon-chevron"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
 <script src="https://2019.igem.org/Template:BIT-China/jquery/Javascript?action=raw&ctype=text/javascript"></script>
 <script src="https://2019.igem.org/Template:BIT-China/bootstrap.min/Javascript?action=raw&ctype=text/javascript"></script>
 <script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.revolution.min/Javascript?action=raw&ctype=text/javascript"></script>

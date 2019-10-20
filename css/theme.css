@@ -2235,15 +2235,7 @@ Version: 1.0
 .homeContact{
     padding: 0 0 100px;
 }
-.homeContact:after{
-    position: absolute;
-    left: 0;
-    top: 255px;
-    content: '';
-    background: url(../images/bg/7.png) no-repeat left top;
-    width: 100%;
-    height: 1239px
-}
+
 .contactArea{
     position: relative;
     padding: 119px 0 0;
@@ -3344,57 +3336,58 @@ Version: 1.0
 
 
 .singleTM{
-    position: relative;
-    padding: 0 120px 0;
+    position: relative !important;
+    padding: 0 120px 0 !important;
 }
 .teamDesc{
-    position: relative;
-    margin: 0 0 24px;
+    position: relative !important;
+    margin: 0 0 24px !important;
 }
 .teamDesc img{
-    height: 200px;
-    display: inline-block;
-    margin-bottom: 28px;
+    height: 200px !important;
+    display: inline-block !important;
+    margin-bottom: 28px !important;
 }
 .teamDesc p{
-    font-size: 23px;
-    line-height: 40px;
-    color: #606378;
-    font-weight: 600;
-    margin: 0;
+    font-size: 23px !important;
+    line-height: 40px !important;
+    color: #606378 !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    text-align: center !important;
 }
 .detail_TM{
-    position: relative;
-    margin: 0 0 0;
+    position: relative !important;
+    margin: 0 0 0 !important;
 }
 .detail_TM h5{
-    color: #383c5e;
-    font-size: 21px;
-    line-height: 40px;
-    font-weight: 700;
-    margin-bottom: 5px;
+    color: #383c5e !important;
+    font-size: 21px !important;
+    line-height: 40px !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
 }
 .detail_TM p{
-    color: #606378;
-    font-size: 19px;
-    line-height: .8;
-    font-weight: 600;
-    margin-bottom: 27px;
+    color: #606378 !important;
+    font-size: 19px !important;
+    line-height: .8 !important;
+    font-weight: 600 !important;
+    margin-bottom: 27px !important;
 }
 .detail_TM .star-rating {
-    position: relative;
-    line-height: .8;
-    margin: 0;
-    padding: 0;
+    position: relative !important;
+    line-height: .8 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .detail_TM .star-rating i {
-    font-size: 16px;
-    line-height: .8;
-    color: #ffa200;
-    letter-spacing: 3px;
+    font-size: 16px !important;
+    line-height: .8 !important;
+    color: #ffa200 !important;
+    letter-spacing: 3px !important;
 }
 .detail_TM .star-rating span i, .detail_TM .star-rating span {
-    color: #bbc0eb;
+    color: #bbc0eb !important;
 }
 .slick-list {
     -moz-user-select: none;
