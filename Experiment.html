@@ -1,92 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>Experiments</title>
     <meta charset="UTF-8">
-    <title>Experiment</title>
-    <script src="js/Utils/vue.js"></script>
-    <!--    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
-    <!--    <script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
-    <!--    <script src="https://unpkg.com/element-ui/lib/umd/locale/en.js"></script>-->
-    <link rel="stylesheet" href="css/element.css">
-    <script src="js/element.js"></script>
-    <script src="js/en.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <style>
+        .blogDetail{
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+        .blogDetail h3{
+            font-size: 35px !important;
+            line-height: 60px !important;
+            margin: 0 0 20px;
+        }
+        .blogDetail h3 a{
+            color: #222222;
+            display: inline-block;
+        }
+        .blogDetail h3 a:hover{
+            color: #8180e0;
+        }
+        .blogDetail h1{
+            font-size:2.5rem !important;
+        }
+        .blogDetail h2{
+            font-size: 2.5rem !important;
+        }
+        .blogDetail p{
+            margin: 0 0 28px !important;
+            line-height: 30px !important;
+            font-size:19px !important;
+        }
+        .blogDetail .author{
+            display: inline-block;
+            float: left;
+            font-size: 19px !important;
+            color: #222222 !important;
+            line-height: 30px !important;
+            font-weight: 400!important;
+            margin: 0 0 0;
+        }
+        .blogDetail .author span{
+            color: #8180e0 !important;
+            font-weight: 700 !important;
+        }
+        .blogDetail a.view_detail{
+            display: inline-block;
+            float: right;
+            font-size: 19px !important;
+            line-height: 30px !important;
+            color: #8180e0;
+            margin: 0;
+        }
+        .blogDetail a.view_detail:hover{
+            color: #222;
+        }
+        .list p {
+            color: #929292 !important;
+            margin: 0 15px 0 0 !important;
+            padding: 0 !important;
+            font-size: 15px !important;
+            display: none !important;
+            line-height: 1 !important;
+        }
+        .list:hover p {
+            display: block !important;
+            animation: text-show 1s !important;
+            -moz-animation: text-show 1s !important; /* Firefox */
+            -webkit-animation: text-show 1s !important; /* Safari 和 Chrome */
+            -o-animation: text-show 1s !important; /* Opera */
+        }
+        .list-item:hover > p{
+            color: black !important;
+            font-size: 19px !important;
+            color: black;
+        }
+        #HQ_page table {
+            border: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+            background-color: transparent !important;
+        }
+        #HQ_page th {
+            background-color: transparent !important;
+            padding: 0 0 2 0 !important;
+            border: none !important;
+        }
 
-    <link rel="stylesheet" href="css/navigator.css">
-    <link rel="stylesheet" href="css/Experiment.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/en.js"></script>
+        #HQ_page td {
+            background-color: transparent !important;
+            padding: 0!important;
+            border: none!important;
+        }
+        .date-picker-before {
+            height: 26vw !important;
+        }
+
+        .el-calendar {
+            width: 40vw !important;
+            height: 17vw !important;
+            margin-left: 32vw !important;
+            background-color: transparent !important;
+        }
+
+        .el-button {
+            background-color: transparent !important;
+            cursor: pointer !important;
+        }
+
+        .el-button:hover {
+            border: transparent !important;
+            cursor: pointer !important;
+            color: black !important;
+        }
+
+        .el-calendar__header {
+            padding-top: 2px !important;
+            padding-bottom: 2px !important;
+            border-bottom: none !important;
+        }
+
+        .el-calendar__body {
+            padding-top: 2px !important;
+        }
+
+        .el-calendar-table tr td:first-child {
+            border-left: none !important;
+        }
+
+        .el-calendar-table tr:first-child td {
+            border-top: none !important;
+        }
+
+        .el-calendar-table td {
+            border-bottom: none !important;
+            border-right: none !important;
+        }
+
+        .el-calendar-day {
+            height: 2vw !important;
+            padding: 4px !important;
+        }
+
+        .el-calendar-day p {
+            margin: 0 !important;
+            text-align: center !important;
+            margin-left: 9vw !important;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
+    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/experiment/CSS?action=raw&ctype=text/css">
+
 </head>
-<body>
-<header>
-    <img class="header_icon" src="photo/arrow.png" height="90" width="90"
-         onClick="headerFunction();rotateFunction()"/>
-    <ul class="hList">
-        <li>
-            <div class="menu">
-                <h1 class="menu-title"><a href="https://2019.igem.org/Team:BIT-China">Homepage</a></h1>
-                <ul class="menu-dropdown"></ul>
-            </div>
-        </li>
-        <li>
-            <div class="menu">
-                <h1 class="menu-title menu-title_2nd">Team</h1>
-                <ul class="menu-dropdown">
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Team">Team</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Collaborations">Collaborations</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Gallery">Gallery</a></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="menu">
-                <h1 class="menu-title menu-title_3rd">Project</h1>
-                <ul class="menu-dropdown">
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Description">Description</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Background">Background</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Design">Design</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Experiments">Experiments</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Notebook">Notebook</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Results">Results</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Demonstrate">Demonstrate</a></li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="menu">
-                <h1 class="menu-title menu-title_4th"><a href="https://2019.igem.org/Team:BIT-China/Parts">Parts</a>
-                </h1>
-                <ul class="menu-dropdown"></ul>
-            </div>
-        </li>
-        <li>
-            <div class="menu">
-                <h1 class="menu-title"><a href="https://2019.igem.org/Team:BIT-China/Model">Model</a></h1>
-                <ul class="menu-dropdown"></ul>
-            </div>
-        </li>
-        <li>
-            <div class="menu">
-                <h1 class="menu-title menu-title_2nd"><a href="https://2019.igem.org/Team:BIT-China/Human_Practices"
-                                                         style="font-size: small">Human Practices</a></h1>
-                <ul class="menu-dropdown"></ul>
-            </div>
-        </li>
-        <li>
-            <div class="menu">
-                <h1 class="menu-title menu-title_3rd"><a href="https://2019.igem.org/Team:BIT-China/Safety">Safety</a>
-                </h1>
-                <ul class="menu-dropdown"></ul>
-            </div>
-        </li>
-        <li>
-            <div class="menu">
-                <h1 class="menu-title menu-title_4th"><a href="https://igem.org/2019_Judging_Form?id=2972">Judging
-                    form</a></h1>
-                <ul class="menu-dropdown"></ul>
-            </div>
-        </li>
-    </ul>
-</header>
+<body class="bg_right">
 
 <div class="experiment_content" id="app">
     <div class="date-picker-before"></div>
@@ -99,86 +176,145 @@
             </p>
         </template>
     </el-calendar>
-    <embed :src="src">
-<!--    <el-dialog-->
-<!--            title=""-->
-<!--            :visible.sync="dialogVisible"-->
-<!--            :fullscreen="true">-->
-<!--        <video height="600" src="resource/printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>-->
-<!--    </el-dialog>-->
-    <div id="aaa">
-        <video height="1500" src="resource/printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>
+    <iframe :src="src" v-show="src !== null && src !== ''">
+        Sorry, but this page uses &lt;iframe&gt; which your browser does not support. Please upgrade your browser for
+        the content.
+    </iframe>
+    <p v-show="src === null">There's no lab notebook for this day.<br>Date range: 26 Jun 2019 - 9 Oct 2019</p>
+    <p v-show="src === ''">Choose one day from the calendar to check the lab notebook.</p>
+    <!--    <embed :src="src">-->
+    <div id="animate">
+        <video height="1500" src="https://2019.igem.org/wiki/images/7/73/T--BIT-China--experiment_printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>
     </div>
 </div>
+
+<script src="https://2019.igem.org/Template:BIT-China/vue/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/element/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/en/Javascript?action=raw&ctype=text/javascript"></script>
+
 <script>
-    var show = false;
-    var current = 0;
-
-    function headerFunction() {
-        show = !show;
-        if (show) {
-            document.getElementsByClassName("hList")[0].style.display = "block";
-            document.getElementsByClassName("hList")[0].style.animation = "moveToRight 0.7s";
-        } else {
-            document.getElementsByClassName("hList")[0].style.animation = "moveToLeft 1s";
-            setTimeout(function () {
-                document.getElementsByClassName("hList")[0].style.display = "none";
-            }, 1000);
-        }
-    }
-
-    function rotateFunction() {
-        if (show) {
-            current += 90;
-        } else {
-            current -= 90;
-        }
-        document.getElementsByClassName("header_icon")[0].style.transform = 'rotate(' + current + 'deg)';
-    }
-
-    $(window).resize(function () {
-        if ($(window).width() > 1200) {
-            document.getElementsByClassName("hList")[0].style.display = "block";
-        }
-    })
-</script>
-<script>
-    let video = document.getElementById("vid");
-    video.onended = function () {
-        app.dialogVisible = false;
-    };
-
-
     ELEMENT.locale(ELEMENT.lang.en);
     let app = new Vue(
         {
             el: '#app',
             data: {
-                date: '',
-                dialogVisible: false,
-                video: video
-            },
-            methods: {
-                videoFunction: function () {
-                    this.video.currentTime = 0;
-                    this.dialogVisible = true;
-                    setTimeout(function () {
-                        app.dialogVisible = false;
-                    }, 4.182 * 1000);
-                }
+                date: ''
             },
             computed: {
                 src: function () {
                     let date = formatDate(this.date);
-                    if (isNaN(date.split('-')[0]))
+                    if (isNaN(date.split('_')[0]))
                         return '';
-                    // this.dialogVisible = true;
-                    // this.videoFunction();
-                    document.getElementById("aaa").style.display="block";
+                    document.getElementById("animate").style.display = "block";
                     setTimeout(function () {
-                        document.getElementById("aaa").style.display="none";
+                        document.getElementById("animate").style.display = "none";
                     }, 4.182 * 1000);
-                    return 'doc/详细设计说明书-BIT攻城狮.pdf';
+                    switch (date) {
+                        case '2019_06_26':
+                            return 'https://2019.igem.org/wiki/images/d/db/T--BIT-China--experiment_2019_06_26.pdf';
+                        case '2019_06_27':
+                            return 'https://2019.igem.org/wiki/images/9/90/T--BIT-China--experiment_2019_06_27.pdf';
+                        case '2019_07_05':
+                            return 'https://2019.igem.org/wiki/images/d/d9/T--BIT-China--experiment_2019_07_05.pdf';
+                        case '2019_07_06':
+                            return 'https://2019.igem.org/wiki/images/f/f8/T--BIT-China--experiment_2019_07_06.pdf';
+                        case '2019_07_07':
+                            return 'https://2019.igem.org/wiki/images/c/c9/T--BIT-China--experiment_2019_07_07.pdf';
+                        case '2019_07_12':
+                            return 'https://2019.igem.org/wiki/images/2/2a/T--BIT-China--experiment_2019_07_12.pdf';
+                        case '2019_07_14':
+                        case '2019_07_15':
+                        case '2019_07_16':
+                            return 'https://2019.igem.org/wiki/images/4/4c/T--BIT-China--experiment_2019_07_14-16.pdf';
+                        case '2019_07_17':
+                        case '2019_07_19':
+                        case '2019_07_20':
+                            return 'https://2019.igem.org/wiki/images/2/29/T--BIT-China--experiment_2019_07_17-20.pdf';
+                        case '2019_07_18':
+                            return 'https://2019.igem.org/wiki/images/7/7b/T--BIT-China--experiment_2019_07_18.pdf';
+                        case '2019_07_21':
+                            return 'https://2019.igem.org/wiki/images/9/9a/T--BIT-China--experiment_2019_07_21.pdf';
+                        case '2019_07_23':
+                            return 'https://2019.igem.org/wiki/images/e/ed/T--BIT-China--experiment_2019_07_23.pdf';
+                        case '2019_07_24':
+                            return 'https://2019.igem.org/wiki/images/7/7e/T--BIT-China--experiment_2019_07_24.pdf';
+                        case '2019_07_26':
+                        case '2019_07_27':
+                            return 'https://2019.igem.org/wiki/images/b/b8/T--BIT-China--experiment_2019_07_26-27.pdf';
+                        case '2019_07_28':
+                        case '2019_07_29':
+                            return 'https://2019.igem.org/wiki/images/7/74/T--BIT-China--experiment_2019_07_28-29.pdf';
+                        case "2019_08_08":
+                            return 'https://2019.igem.org/wiki/images/4/40/T--BIT-China--experiment_2019_08_08.pdf';
+                        case '2019_08_09':
+                            return 'https://2019.igem.org/wiki/images/6/63/T--BIT-China--experiment_2019_08_09.pdf';
+                        case '2019_08_10':
+                            return 'https://2019.igem.org/wiki/images/9/9c/T--BIT-China--experiment_2019_08_10.pdf';
+                        case '2019_08_12':
+                            return 'https://2019.igem.org/wiki/images/1/16/T--BIT-China--experiment_2019_08_12.pdf';
+                        case '2019_08_16':
+                            return 'https://2019.igem.org/wiki/images/b/bd/T--BIT-China--experiment_2019_08_16.pdf';
+                        case '2019_08_17':
+                            return 'https://2019.igem.org/wiki/images/4/48/T--BIT-China--experiment_2019_08_17.pdf';
+                        case '2019_08_20':
+                            return 'https://2019.igem.org/wiki/images/4/47/T--BIT-China--experiment_2019_08_20.pdf';
+                        case '2019_08_22':
+                            return 'https://2019.igem.org/wiki/images/e/e8/T--BIT-China--experiment_2019_08_22.pdf';
+                        case '2019_08_23':
+                            return 'https://2019.igem.org/wiki/images/5/5e/T--BIT-China--experiment_2019_08_23.pdf';
+                        case '2019_08_25':
+                            return 'https://2019.igem.org/wiki/images/f/fd/T--BIT-China--experiment_2019_08_25.pdf';
+                        case '2019_08_26':
+                            return 'https://2019.igem.org/wiki/images/8/8d/T--BIT-China--experiment_2019_08_26.pdf';
+                        case '2019_08_28':
+                            return 'https://2019.igem.org/wiki/images/b/b0/T--BIT-China--experiment_2019_08_28.pdf';
+                        case '2019_08_29':
+                            return 'https://2019.igem.org/wiki/images/6/68/T--BIT-China--experiment_2019_08_29.pdf';
+                        case '2019_08_30':
+                            return 'https://2019.igem.org/wiki/images/1/1f/T--BIT-China--experiment_2019_08_30.pdf';
+                        case '2019_08_31':
+                            return 'https://2019.igem.org/wiki/images/a/ae/T--BIT-China--experiment_2019_08_31.pdf';
+                        case '2019_09_01':
+                            return 'https://2019.igem.org/wiki/images/f/f9/T--BIT-China--experiment_2019_09_01.pdf';
+                        case '2019_09_02':
+                            return 'https://2019.igem.org/wiki/images/5/5c/T--BIT-China--experiment_2019_09_02.pdf';
+                        case '2019_09_03':
+                            return 'https://2019.igem.org/wiki/images/1/18/T--BIT-China--experiment_2019_09_03.pdf';
+                        case '2019_09_04':
+                            return 'https://2019.igem.org/wiki/images/0/01/T--BIT-China--experiment_2019_09_04.pdf';
+                        case '2019_09_05':
+                            return 'https://2019.igem.org/wiki/images/6/68/T--BIT-China--experiment_2019_09_05.pdf';
+                        case '2019_09_06':
+                            return 'https://2019.igem.org/wiki/images/7/73/T--BIT-China--experiment_2019_09_06.pdf';
+                        case '2019_09_07':
+                            return 'https://2019.igem.org/wiki/images/3/35/T--BIT-China--experiment_2019_09_07.pdf';
+                        case '2019_09_08':
+                            return 'https://2019.igem.org/wiki/images/b/ba/T--BIT-China--experiment_2019_09_08.pdf';
+                        case '2019_09_09':
+                            return 'https://2019.igem.org/wiki/images/d/d4/T--BIT-China--experiment_2019_09_09.pdf';
+                        case '2019_09_11':
+                            return 'https://2019.igem.org/wiki/images/3/3b/T--BIT-China--experiment_2019_09_11.pdf';
+                        case '2019_09_14':
+                        case '2019_09_15':
+                        case '2019_09_16':
+                            return 'https://2019.igem.org/wiki/images/5/56/T--BIT-China--experiment_2019_09_14-16.pdf';
+                        case '2019_09_24':
+                            return 'https://2019.igem.org/wiki/images/9/94/T--BIT-China--experiment_2019_09_24.pdf';
+                        case '2019_09_29':
+                        case '2019_09_30':
+                        case '2019_10_01':
+                        case '2019_10_02':
+                        case '2019_10_03':
+                        case '2019_10_04':
+                        case '2019_10_05':
+                        case '2019_10_06':
+                        case '2019_10_07':
+                        case '2019_10_08':
+                        case '2019_10_09':
+                            return 'https://2019.igem.org/wiki/images/4/48/T--BIT-China--experiment_2019_09_29-10_09.pdf';
+                        default:
+                            return null;
+                    }
                 }
             }
         }
@@ -191,8 +327,9 @@
         m = m < 10 ? ('0' + m) : m;
         let d = date.getDate();
         d = d < 10 ? ('0' + d) : d;
-        return y + '-' + m + '-' + d;
+        return y + '_' + m + '_' + d;
     }
 </script>
+
 </body>
 </html>

@@ -2,7 +2,7 @@
     margin-top: 100px;
     width: 100%;
     height: 200vh;
-    background-image: url("../photo/Experiment/资源 23@2x-.png");
+    background-image: url("https://2019.igem.org/wiki/images/e/e8/T--BIT-China--experiment.png");
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
@@ -11,48 +11,48 @@
 }
 
 .date-picker-before {
-    height: 26vw;
+    height: 26vw !important;
 }
 
 .el-calendar {
-    width: 40vw;
-    height: 17vw;
-    margin-left: 32vw;
+    width: 40vw !important;
+    height: 17vw !important;
+    margin-left: 32vw !important;
     background-color: transparent !important;
 }
 
 .el-button {
-    background-color: transparent;
+    background-color: transparent !important;
     cursor: pointer !important;
 }
 
 .el-button:hover {
-    border: transparent;
+    border: transparent !important;
     cursor: pointer !important;
-    color: black;
+    color: black !important;
 }
 
 .el-calendar__header {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border-bottom: none;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    border-bottom: none !important;
 }
 
 .el-calendar__body {
-    padding-top: 2px;
+    padding-top: 2px !important;
 }
 
 .el-calendar-table tr td:first-child {
-    border-left: none;
+    border-left: none !important;
 }
 
 .el-calendar-table tr:first-child td {
-    border-top: none;
+    border-top: none !important;
 }
 
 .el-calendar-table td {
-    border-bottom: none;
-    border-right: none;
+    border-bottom: none !important;
+    border-right: none !important;
 }
 
 .el-calendar-day {
@@ -60,7 +60,7 @@
 }
 
 .el-calendar-day p {
-    margin: 0;
+    margin: 0 !important;
 }
 
 embed {
@@ -70,11 +70,19 @@ embed {
     height: 48vw;
 }
 
-/*.el-dialog__body {*/
-/*    height: 100vh;*/
-/*}*/
+iframe {
+    margin-top: 2vw;
+    margin-left: 5vw;
+    width: 55vw;
+    height: 48vw;
+}
 
-#aaa {
+.experiment_content > p {
+    margin-top: 8vw !important;
+    text-align: center !important;
+}
+
+#animate {
     width: 100vw;
     height: 200vh;
     background-color: white;
