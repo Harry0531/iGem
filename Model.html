@@ -292,37 +292,31 @@
                                         intensity. In this model, we choose the promoter and their intensities are as
                                         followed.
                                     </p>
-                                    <p style="text-align: center">Table 1 promoter and their intensities used in the
-                                        model</p>
-                                    <!--todo 表格-->
-                                    <p>We obtained the the curve of fluorescence intensity changing with time under
-                                        different promoters which inducing LuxR expression according to experiments. In
-                                        which we averaged the data of the last 6 hours of each promoter and defined it
-                                        as the corresponding average production intensity AP. We made the following
-                                        scatter map of the average production intensity AP and the intensity of the
-                                        promoter.</p>
-                                    <!--todo 图片-->
-                                    <p style="text-align: center">Fig 1 the relationship between the average production
-                                        intensity AP and the intensity of the promoter</p>
-                                    <p>In this figure, we can find that when that intensity of the p<sub>luxR</sub>
-                                        promoter is
-                                        low, the AP is in a positive correlation with the promoter intensity. But when
-                                        the promoter is too strong, the AP will start to drop. We speculate that there
-                                        may be a competition for the ribosome and the mRNA raw material at this time,
-                                        resulting in a hindered production. We made a linear fit curve of AP and
-                                        promoter intensity when the promoter is relatively weak, as the prediction of
-                                        this small interval. We get the following equation.</p>
-                                    <!--todo 公式-->
+                                    <img src="https://2019.igem.org/wiki/images/4/4a/T--BIT-China--model-2-t1.png">
+                                    <p>We obtained the curve of fluorescence intensity changing with time under
+                                        different promoters which inducing LuxR expression according to experiments and
+                                        get the figure below. In which we averaged the data of the last 6 hours of each
+                                        promoter and defined it as the corresponding average production intensity AP. We
+                                        made the following scatter map of the average production intensity AP and the
+                                        intensity of the promoter.</p>
+                                    <img src="https://2019.igem.org/wiki/images/4/4a/T--BIT-China--model-2-i1.png">
+                                    <img src="https://2019.igem.org/wiki/images/8/81/T--BIT-China--model-2-i2.png">
+                                    <p>In this figure, we can find the promoter intensity and the fluorescence intensity
+                                        have an approximate linear relationship. When the promoter is stronger, and
+                                        there may be more possible to have a better production. We made a linear fit
+                                        curve of AP and promoter intensity as the prediction of this small interval. The
+                                        following equation is obtained.</p>
+                                    <img src="https://2019.igem.org/wiki/images/8/86/T--BIT-China--model-2-f1-v2.png"
+                                         style="width: auto">
                                     <p>Where [P]<sub>intensity</sub> is the promoter intensity.</p>
                                     <h4>Results：</h4>
                                     <p>
-                                        In this model, we obtained a prediction of the AP when the intensity of the
-                                        promoter is weak. And we also get the trend of overall change between the AP and
-                                        promoter intensity. Subject to the experiment, we may not be able to get a more
-                                        accurate result, but we have a promoter-selected interval: the intensity is
-                                        between... Between the two. This is of great significance for practical
-                                        production and follow-up experiments, and a further step forward to the goal of
-                                        maximizing production.
+                                        In this model, we got the trend of overall change between the AP and promoter
+                                        intensity and made a linear fit curve to predict it. Subject to the experiment,
+                                        we may not be able to get a more accurate result, but we have a promoter
+                                        selection criteria: the intensity of the promoter should be higher than J23102.
+                                        This is of great significance for practical production and follow-up
+                                        experiments, and a further step forward to the goal of maximizing production.
                                     </p>
                                 </el-collapse-item>
                                 <el-collapse-item title="Cell growth simulation model"
@@ -366,7 +360,7 @@
                                         value of the parameters is given when the population density reaches
                                         5×10<sup>8</sup>.The
                                         meaning and values of the parameters in the model are as follows:</p>
-                                    <img src="https://2019.igem.org/wiki/images/3/3e/T--BIT-China--model-3-t1.png">
+                                    <img src="https://2019.igem.org/wiki/images/1/16/T--BIT-China--model-3-t1-v2.png">
                                     <el-popover
                                             placement="top-start"
                                             title="Reference"
@@ -396,13 +390,13 @@
                                          style="width: auto">
                                     <p>The parameters in the model are fitted by the experimental data, and the fitting
                                         results are as follows:</p>
-                                    <img src="https://2019.igem.org/wiki/images/3/3e/T--BIT-China--model-3-t2.png">
+                                    <img src="https://2019.igem.org/wiki/images/7/74/T--BIT-China--model-3-t2-v2.png">
                                     <h4>Results:</h4>
                                     <p>We combine the above models and solve them with software. We can get the
                                         concentration curve of all substances, and the results are shown in the figure
                                         below:</p>
-                                    <img src="https://2019.igem.org/wiki/images/1/1b/T--BIT-China--model-3-i2.jpg">
-                                    <img src="https://2019.igem.org/wiki/images/9/9c/T--BIT-China--model-3-i3.jpg">
+                                    <img src="https://2019.igem.org/wiki/images/6/6f/T--BIT-China--model-3-i2-v2.png">
+                                    <img src="https://2019.igem.org/wiki/images/0/0f/T--BIT-China--model-3-i3-v2.png">
                                     <p>In this result, we can clearly see that AHL showed very low growth rate in the
                                         early stage. At a certain time, when the population density reached a certain
                                         level, AHL showed a sharp increase trend, indicating that quorum sensing has
@@ -433,7 +427,7 @@
                                         final production. It will change the concentration of crtE, crtB and crtI, thus
                                         influent the concentration of intermediate product, and finally affect the
                                         quantity of Lycopene. This model is aimed to find the best arrangement of the
-                                        three kinds of promoter which can maximize the lycopene output.
+                                        three kinds of promoter which can maximize the Lycopene output.
                                     </p>
                                     <h4>Model analysis and construction</h4>
                                     <p>Since σB,σF,T7 are simultaneously transcribed in genes, we can assume that the
@@ -442,7 +436,8 @@
                                         ratios of these three promoter strengths were measured by fluorescence
                                         experiments. [P]<sub>intensity</sub> means the intensity of the promoter P, and
                                         the calculated data is as followed:</p>
-                                    <!-- todo 公式-->
+                                    <img src="https://2019.igem.org/wiki/images/4/41/T--BIT-China--model-4-f1-v2.png"
+                                         style="width: auto">
                                     <p> The ratio of three promoter intensities can be assumed to be the ratio of the
                                         quantity of the three enzymes crtE, crtB and crtI attached to these promoters.
                                     </p>
@@ -467,9 +462,8 @@
                                     <p>Given the value of following parameters:</p>
                                     <img src="https://2019.igem.org/wiki/images/0/07/T--BIT-China--model-4-t1.png">
                                     <p>Based on the premise above, we obtained the optimization result:
-                                        max[Lycopene]=0.0133. The enzymes and their attached promoters are:
-                                        <!-- todo 内容-->
-                                        , which
+                                        max[Lycopene]=8.74.The enzymes and their attached promoters are: crtE with
+                                        P<sub>σF</sub>, crtB with P<sub>σB</sub>, crtI with P<sub>T7</sub>, which
                                         corresponds to the results used in the experiment.</p>
                                 </el-collapse-item>
                                 <el-collapse-item
