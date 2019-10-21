@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Include All CSS -->
     <style>
-        .blogDetail{
+        .blogDetail {
             line-height: 30px !important;
             color: #929292 !important;
             letter-spacing: 0 !important;
@@ -17,43 +17,52 @@
             -webkit-transition: all ease 400ms;
             -moz-transition: all ease 400ms;
         }
-        .blogDetail h3{
+
+        .blogDetail h3 {
             font-size: 35px !important;
             line-height: 60px !important;
             margin: 0 0 20px;
         }
-        .blogDetail h3 a{
+
+        .blogDetail h3 a {
             color: #222222;
             display: inline-block;
         }
-        .blogDetail h3 a:hover{
+
+        .blogDetail h3 a:hover {
             color: #8180e0;
         }
-        .blogDetail h1{
-            font-size:2.5rem !important;
-        }
-        .blogDetail h2{
+
+        .blogDetail h1 {
             font-size: 2.5rem !important;
         }
-        .blogDetail p{
+
+        .blogDetail h2 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail p {
             margin: 0 0 28px !important;
             line-height: 30px !important;
-            font-size:19px !important;
+            font-size: 19px !important;
         }
-        .blogDetail .author{
+
+        .blogDetail .author {
             display: inline-block;
             float: left;
             font-size: 19px !important;
             color: #222222 !important;
             line-height: 30px !important;
-            font-weight: 400!important;
+            font-weight: 400 !important;
             margin: 0 0 0;
         }
-        .blogDetail .author span{
+
+        .blogDetail .author span {
             color: #8180e0 !important;
             font-weight: 700 !important;
         }
-        .blogDetail a.view_detail{
+
+        .blogDetail a.view_detail {
             display: inline-block;
             float: right;
             font-size: 19px !important;
@@ -61,9 +70,11 @@
             color: #8180e0;
             margin: 0;
         }
-        .blogDetail a.view_detail:hover{
+
+        .blogDetail a.view_detail:hover {
             color: #222;
         }
+
         .list p {
             color: #929292 !important;
             margin: 0 15px 0 0 !important;
@@ -72,6 +83,7 @@
             display: none !important;
             line-height: 1 !important;
         }
+
         .list:hover p {
             display: block !important;
             animation: text-show 1s !important;
@@ -79,17 +91,20 @@
             -webkit-animation: text-show 1s !important; /* Safari 和 Chrome */
             -o-animation: text-show 1s !important; /* Opera */
         }
-        .list-item:hover > p{
+
+        .list-item:hover > p {
             color: black !important;
             font-size: 19px !important;
             color: black;
         }
+
         #HQ_page table {
             border: none !important;
             width: 100% !important;
             margin: 0 !important;
             background-color: transparent !important;
         }
+
         #HQ_page th {
             background-color: transparent !important;
             padding: 0 0 2 0 !important;
@@ -98,9 +113,10 @@
 
         #HQ_page td {
             background-color: transparent !important;
-            padding: 0!important;
-            border: none!important;
+            padding: 0 !important;
+            border: none !important;
         }
+
         .date-picker-before {
             height: 26vw !important;
         }
@@ -158,9 +174,12 @@
         }
     </style>
 
-    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
-    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
-    <link rel="stylesheet" type="text/css" href="https://2019.igem.org/Template:BIT-China/experiment/CSS?action=raw&ctype=text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/experiment/CSS?action=raw&ctype=text/css">
 
 </head>
 <body class="bg_right">
@@ -184,7 +203,7 @@
     <p v-show="src === ''">Choose one day from the calendar to check the lab notebook.</p>
     <!--    <embed :src="src">-->
     <div id="animate">
-        <video height="1500" src="https://2019.igem.org/wiki/images/7/73/T--BIT-China--experiment_printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>
+        <video height="200" src="./resource/printer.mp4" id="vid" autoplay="autoplay" loop="loop"></video>
     </div>
 </div>
 
@@ -208,7 +227,7 @@
                     document.getElementById("animate").style.display = "block";
                     setTimeout(function () {
                         document.getElementById("animate").style.display = "none";
-                    }, 4.182 * 1000);
+                    }, 1500);
                     switch (date) {
                         case '2019_06_26':
                             return 'https://2019.igem.org/wiki/images/d/db/T--BIT-China--experiment_2019_06_26.pdf';
