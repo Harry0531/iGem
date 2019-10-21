@@ -1,7 +1,7 @@
 {{Template:BIT-China/navigator/HTML}}
 <html>
 <head>
-    <title>Background</title>
+    <title>Model</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Include All CSS -->
@@ -152,13 +152,14 @@
             height: auto;
             display: block;
             margin: 0 auto;
-        }Human Practice.html
+        }
 
+        Human Practice.html
         .img-center {
             text-align: center;
         }
 
-        .my_popover{
+        .my_popover {
             line-height: 30px;
             color: blue;
             letter-spacing: 0;
@@ -166,8 +167,9 @@
             font-family: 'Muli', sans-serif;
             font-weight: 400;
         }
-        .my_popover:hover{
-            cursor:pointer ;
+
+        .my_popover:hover {
+            cursor: pointer;
         }
     </style>
 
@@ -223,16 +225,326 @@
             <div class="row">
                 <div class="col-lg-12 col-md-8">
                     <div class="singleBlog">
-                        <h1>Design</h1>
-                        <h4 style="margin-left: 10px">Transcription management is a cell regulatory system used in the fermentation industry.</h4>
+                        <h1>Model</h1>
                         <div class="blogDetail">
                             <el-collapse v-model="activeName">
-                                <el-collapse-item title="Problems in fermentation industry"
+                                <el-collapse-item title="Overview"
                                                   name="1">
-                            <p></p>
+                                    <p>
+                                        Modeling is to use mathematical tools to simulate and predict the system. The
+                                        experiment is restricted by time and cost, which may not be comprehensive.
+                                        Modeling can solve this problem by establishing mathematical system and improve
+                                        the whole project. Also, the results of modeling can guide the experiment in
+                                        turn, and provide clues for the selection of each material in the experiment.
+                                        Last but not least, modeling can also optimize the production process when
+                                        satisfying some assumptions. In our design, the overall process will be divided
+                                        into two parts: cell growth part and cell production part. Our main purpose is
+                                        to obtain the changes of variables concerned in this process, such as the
+                                        interaction of different promoter intensity and the factors that affect the
+                                        final yield. Through the detailed thinking of the whole process, we divide the
+                                        whole model into the following four models:</p>
+                                    <p>
+                                        Promoter intensity relationship model. The model considers how the intensity of
+                                        promoter which inducing LuxR affects the production during the growth process.
+                                        We use the fitting method to get the relationship curve between the promoter
+                                        intensity and the fluorescence intensity, and then decide which promoter should
+                                        be used in the actual production.</p>
+                                    <p>
+                                        Cell growth simulation model. In this model, we mainly consider the relationship
+                                        between cell density and signal factor concentration during cell growth. In this
+                                        model, we simulate the LuxR-AHL system. And because the system are related to
+                                        the number of cells, we add the Logistics growth model of cells, and finally
+                                        describe the relationship between the components in the growth process.</p>
+                                    <p>
+                                        Promoter sequencing model. The purpose of this model is to adjust the sequencing
+                                        of the three promoters to maximize the final yield. In this model we simplify
+                                        the model to a certain extent for too many parameters. By considering the
+                                        solution of the whole process in the equilibrium state, the recurrence relation
+                                        of each component is obtained, and the optimal solution is achieved by
+                                        enumerating.</p>
+                                    <p>
+                                        The optimization model of the balance between production and growth. The model
+                                        is used to consider the transformation of cells in growth and production
+                                        condition by periodic regulation. The aim is to explore whether it is necessary
+                                        to regulate and decide the regulation time when required.</p>
+                                    <p>
+                                        According to these four models, we has basically full consideration to the
+                                        project. The establishment of the accurate numerical relationship between these
+                                        quantities is great help to the experiment and even the subsequent production.
+
+                                    </p>
                                 </el-collapse-item>
                                 <el-collapse-item title="Promoter intensity relationship model"
                                                   name="2">
+                                    <h4>
+                                        Purpose</h4>
+                                    <p>
+                                        In the gene pathway, we linked the gene of GFP fluorescent protein after p<sub>LuxL</sub>
+                                        promoter. By giving different promoter which inducing LuxR expression and then
+                                        measured the fluorescence intensity. We obtained the relationship curve between
+                                        the promoter intensity and the fluorescence intensity, then the best promoter
+                                        was found.</p>
+                                    <h4>
+                                        Model Construction:</h4>
+                                    <p>
+                                        The promoter data of this model were derived from iGEM2006_Berkeley, where we
+                                        used the fluorescence intensity in their program to characterize the promoter
+                                        intensity. In this model, we choose the promoter and their intensities are as
+                                        followed.
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/4/4a/T--BIT-China--model-2-t1.png">
+                                    <p>We obtained the curve of fluorescence intensity changing with time under
+                                        different promoters which inducing LuxR expression according to experiments and
+                                        get the figure below. In which we averaged the data of the last 6 hours of each
+                                        promoter and defined it as the corresponding average production intensity AP. We
+                                        made the following scatter map of the average production intensity AP and the
+                                        intensity of the promoter.</p>
+                                    <img src="https://2019.igem.org/wiki/images/4/4a/T--BIT-China--model-2-i1.png">
+                                    <img src="https://2019.igem.org/wiki/images/8/81/T--BIT-China--model-2-i2.png">
+                                    <p>In this figure, we can find the promoter intensity and the fluorescence intensity
+                                        have an approximate linear relationship. When the promoter is stronger, and
+                                        there may be more possible to have a better production. We made a linear fit
+                                        curve of AP and promoter intensity as the prediction of this small interval. The
+                                        following equation is obtained.</p>
+                                    <img src="https://2019.igem.org/wiki/images/8/86/T--BIT-China--model-2-f1-v2.png"
+                                         style="width: auto">
+                                    <p>Where [P]<sub>intensity</sub> is the promoter intensity.</p>
+                                    <h4>Results：</h4>
+                                    <p>
+                                        In this model, we got the trend of overall change between the AP and promoter
+                                        intensity and made a linear fit curve to predict it. Subject to the experiment,
+                                        we may not be able to get a more accurate result, but we have a promoter
+                                        selection criteria: the intensity of the promoter should be higher than J23102.
+                                        This is of great significance for practical production and follow-up
+                                        experiments, and a further step forward to the goal of maximizing production.
+                                    </p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Cell growth simulation model"
+                                                  name="3">
+                                    <h4>Purpose:</h4>
+                                    <p>
+                                        To simulate the variation of different components with time, and discover the
+                                        relationship between these components and the number of cells in the process of
+                                        cell growth. This model lays the foundation for the whole process.
+                                    </p>
+                                    <h4>The process of the quorum sensing:</h4>
+                                    <p>First of all, in order to describe the intracellular signaling factors
+                                        accurately, we added LuxR-AHL system to the model. The mode of operation is
+                                        shown in the following figure. AHL is an important signal factor connecting the
+                                        two systems, in which the LuxR-AHL system can produce AHL by enzyme reaction.
+                                        LuxI connects the gene fragment of the production part and is responsible for
+                                        starting the lycopene production.</p>
+                                    <img src="https://2019.igem.org/wiki/images/4/46/T--BIT-China--experiment_model-3-i1.png">
+                                    <h4>Model Hypothesis:</h4>
+                                    <p>(1) The concentration of signal factors in all cells is the same.</p>
+                                    <p>(2) The cell growth environment is not affected by other conditions</p>
+                                    <h4>The ode model:</h4>
+                                    <p>(1)the model of signal factor concentration in cell:</p>
+                                    <p>When considering the change of signal factor concentration in a single cell, we
+                                        refer to the model of Maike
+                                        <el-popover
+                                                placement="top-start"
+                                                title="Reference"
+                                                width="400"
+                                                trigger="hover"
+                                                content="Melke P, Sahlin P, Levchenko A, et al. A cell-based model for quorum sensing
+                                        in heterogeneous bacterial colonies[J]. PLoS computational biology, 2010, 6(6):
+                                        e1000819.">
+                                            <a class="my_popover" slot="reference">[1]</a></el-popover>
+                                        in 2010. Because our model is in a closed container, we delete the diffusion
+                                        term from the original model, and improve the solvability. We modified and
+                                        established our own model according to the actual situation.
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/8/87/T--BIT-China--model-3-f1.png">
+                                    <p>In the model, the RA is AHL-LuxR complex and C is the dimerized complex. The
+                                        value of the parameters is given when the population density reaches
+                                        5×10<sup>8</sup>.The
+                                        meaning and values of the parameters in the model are as follows:</p>
+                                    <img src="https://2019.igem.org/wiki/images/1/16/T--BIT-China--model-3-t1-v2.png">
+                                    <el-popover
+                                            placement="top-start"
+                                            title="Reference"
+                                            width="400"
+                                            trigger="hover"
+                                            content="Marc, W., & Javier, B. (2013). Dynamics of the quorum sensing
+                                            switch: stochastic and non-stationary effects. BMC Systems
+                                            Biology,7,1(2013-01-16), 7(1), 6-6.">
+                                        <a class="my_popover" slot="reference">Ref[2]</a></el-popover>
+                                    ,
+                                    <el-popover
+                                            placement="top-start"
+                                            title="Reference"
+                                            width="400"
+                                            trigger="hover"
+                                            content=" James, S., Nilsson, P., James, G., Kjelleberg, S., & Fagerström,
+                                            T. (2000). Luminescence control in the marine bacterium vibrio fischeri:
+                                            an analysis of the dynamics of lux regulation. Journal of Molecular Biology,
+                                            296(4), 1127-1137.">
+                                        <a class="my_popover" slot="reference">Ref[3]</a></el-popover>
+                                    <p>(2)Cell growth model：</p>
+                                    <p>
+                                        Because the growth of cells in the process of growth is only limited by
+                                        environmental space, and nutritional factors. We use the Logistic growth model:
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/c/c1/T--BIT-China--model-3-f2.png"
+                                         style="width: auto">
+                                    <p>The parameters in the model are fitted by the experimental data, and the fitting
+                                        results are as follows:</p>
+                                    <img src="https://2019.igem.org/wiki/images/7/74/T--BIT-China--model-3-t2-v2.png">
+                                    <h4>Results:</h4>
+                                    <p>We combine the above models and solve them with software. We can get the
+                                        concentration curve of all substances, and the results are shown in the figure
+                                        below:</p>
+                                    <img src="https://2019.igem.org/wiki/images/6/6f/T--BIT-China--model-3-i2-v2.png">
+                                    <img src="https://2019.igem.org/wiki/images/0/0f/T--BIT-China--model-3-i3-v2.png">
+                                    <p>In this result, we can clearly see that AHL showed very low growth rate in the
+                                        early stage. At a certain time, when the population density reached a certain
+                                        level, AHL showed a sharp increase trend, indicating that quorum sensing has
+                                        occurred. The growth rate of LuxI also began to increase suddenly, and a large
+                                        number of products were produced. This result shows that our model is very
+                                        consistent with the phenomenon of quorum sensing, and can be used as a
+                                        mathematical description of the cell growth state in the experiment. This model
+                                        can be great significance to the experimental guidance.</p>
+                                    <h4>Reference</h4>
+                                    <p>[1] Melke P, Sahlin P, Levchenko A, et al. A cell-based model for quorum sensing
+                                        in heterogeneous bacterial colonies[J]. PLoS computational biology, 2010, 6(6):
+                                        e1000819.</p>
+                                    <p>
+                                        [2] Marc, W., & Javier, B. (2013). Dynamics of the quorum sensing switch:
+                                        stochastic and non-stationary effects. BMC Systems Biology,7,1(2013-01-16),
+                                        7(1), 6-6.</p>
+                                    <p>
+                                        [3] James, S., Nilsson, P., James, G., Kjelleberg, S., & Fagerström, T. (2000).
+                                        Luminescence control in the marine bacterium vibrio fischeri: an analysis of the
+                                        dynamics of lux regulation. Journal of Molecular Biology, 296(4), 1127-1137.
+                                    </p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Promoter sequencing model"
+                                                  name="4">
+                                    <h4>Purpose</h4>
+                                    <p> In the production procedure, adjusting different arrangement of the promoter
+                                        P<sub>σB</sub>,P<sub>σF</sub>,P<sub>T7</sub> will lead to differences to the
+                                        final production. It will change the concentration of crtE, crtB and crtI, thus
+                                        influent the concentration of intermediate product, and finally affect the
+                                        quantity of Lycopene. This model is aimed to find the best arrangement of the
+                                        three kinds of promoter which can maximize the Lycopene output.
+                                    </p>
+                                    <h4>Model analysis and construction</h4>
+                                    <p>Since σB,σF,T7 are simultaneously transcribed in genes, we can assume that the
+                                        amount of these three proteins is the same, so the quantities of these three
+                                        enzymes crtE, crtB and crtI is only related to their promoter intensities. The
+                                        ratios of these three promoter strengths were measured by fluorescence
+                                        experiments. [P]<sub>intensity</sub> means the intensity of the promoter P, and
+                                        the calculated data is as followed:</p>
+                                    <img src="https://2019.igem.org/wiki/images/4/41/T--BIT-China--model-4-f1-v2.png"
+                                         style="width: auto">
+                                    <p> The ratio of three promoter intensities can be assumed to be the ratio of the
+                                        quantity of the three enzymes crtE, crtB and crtI attached to these promoters.
+                                    </p>
+                                    <p>From the process above we can obtain the following equation. The reaction was
+                                        assumed to be reached an equilibrium state and that the rate of FPP generated
+                                        from the previous reaction is assumed to be constant. We express the reaction
+                                        process in the following equations:</p>
+                                    <img src="https://2019.igem.org/wiki/images/2/20/T--BIT-China--model-4-f2.png"
+                                         style="width: auto">
+                                    <p>Where k<sub>EA</sub>[crtE] is the maximum speed of enzyme reaction when formation
+                                        of GGPP catalyzed by crtE, due to the maximum speed of enzyme reaction is
+                                        proportional to amount of enzyme. Other equations are the same.</p>
+                                    <p>From the above equation, we can get</p>
+                                    <img src="https://2019.igem.org/wiki/images/d/da/T--BIT-China--model-4-f3.png"
+                                         style="width: auto">
+                                    <p>Our goal is to reach max[Lycopene]. Through the above formula, it can be found
+                                        that the size between each component is only related to the ratio of the amount
+                                        of the three enzymes crtE, crtB and crtI. Because the total amount of
+                                        calculation is very small, the optimal results can be obtained through the
+                                        enumeration method. The parameters in this model are given by ourselves.</p>
+                                    <h4>Simulation results</h4>
+                                    <p>Given the value of following parameters:</p>
+                                    <img src="https://2019.igem.org/wiki/images/0/07/T--BIT-China--model-4-t1.png">
+                                    <p>Based on the premise above, we obtained the optimization result:
+                                        max[Lycopene]=8.74.The enzymes and their attached promoters are: crtE with
+                                        P<sub>σF</sub>, crtB with P<sub>σB</sub>, crtI with P<sub>T7</sub>, which
+                                        corresponds to the results used in the experiment.</p>
+                                </el-collapse-item>
+                                <el-collapse-item
+                                        title="The optimization model of the balance between production and growth"
+                                        name="5">
+                                    <h4>purpose</h4>
+                                    <p>In industrial production, it could be possible to use the cycle regulation and
+                                        makes the system constantly transform between growth and production. It may be
+                                        more effective to use a period of growth time to get more cells to produce than
+                                        only to keep the cell production. Therefore, our following model is to discuss
+                                        such an occasion and explore the periodic adjustment scheme in the quantitative
+                                        case.</p>
+                                    <h4>Model analysis and construction</h4>
+                                    <p>First we take a look on the Logistic growth model:</p>
+                                    <img src="https://2019.igem.org/wiki/images/3/39/T--BIT-China--model-5-f1.png"
+                                         style="width: auto">
+                                    <p>The special solution of this equation under a given initial value N<sub>0</sub>
+                                        when t=t<sub>0</sub> is the function as below:</p>
+                                    <img src="https://2019.igem.org/wiki/images/8/8a/T--BIT-China--model-5-f2.png"
+                                         style="width: auto">
+                                    <p>Generally speaking, the regulated growth and production process may be shown in
+                                        the following figure.</p>
+                                    <img src="https://2019.igem.org/wiki/images/a/a9/T--BIT-China--model-5-i1.png">
+                                    <p>We analyze it only in one cycle and add some analytical variables to this.</p>
+                                    <img src="https://2019.igem.org/wiki/images/9/96/T--BIT-China--model-5-i2.png">
+                                    <p>In a circular sub process, it can actually be divided into two processes. The
+                                        growth process from 0 to t<sub>1</sub> and the decreasing process from
+                                        t<sub>1</sub> to t<sub>2</sub>. Two differential equations are satisfied in
+                                        two processes
+                                    </p>
+                                    <img src="https://2019.igem.org/wiki/images/9/9f/T--BIT-China--model-5-f3.png"
+                                         style="width: auto">
+                                    <p>The special solution is obtained when the initial value
+                                        x<sub>1</sub>，x<sub>2</sub> is given separately.</p>
+                                    <img src="https://2019.igem.org/wiki/images/0/0c/T--BIT-China--model-5-f4.png"
+                                         style="width: auto">
+                                    <p>Let t=t<sub>1</sub> in the (1) function，then N<sub>1</sub> (t<sub>1</sub> ) equal
+                                        to x<sub>1</sub>. We can get the relationship between x<sub>2</sub> and
+                                        x<sub>1</sub>.</p>
+                                    <img src="https://2019.igem.org/wiki/images/3/33/T--BIT-China--model-5-f5.png"
+                                         style="width: auto">
+                                    <p>Let t=T=t<sub>1</sub>+t<sub>2</sub> in the (2) function，then N<sub>2</sub>(t<sub>1</sub>+t<sub>2</sub>)
+                                        equal to x<sub>1</sub>. We can
+                                        get the relationship between t<sub>2</sub> and t<sub>1</sub>.</p>
+                                    <img src="https://2019.igem.org/wiki/images/6/69/T--BIT-China--model-5-f6.png"
+                                         style="width: auto">
+                                    <p>We can begin to produce only in the period from t<sub>1</sub> to T in one cycle.
+                                        We assume that the production per unit time ΔE(t) is proportional to the
+                                        population, that is,</p>
+                                    <img src="https://2019.igem.org/wiki/images/a/ac/T--BIT-China--model-5-f7.png"
+                                         style="width: auto">
+                                    <p>Then the production in one cycle is</p>
+                                    <img src="https://2019.igem.org/wiki/images/e/e1/T--BIT-China--model-5-f8.png"
+                                         style="width: auto">
+                                    <p>Assume that the amount spent on each cycle adjustment is m, so our optimization
+                                        goal is</p>
+                                    <img src="https://2019.igem.org/wiki/images/0/00/T--BIT-China--model-5-f9.png"
+                                         style="width: auto">
+                                    <p>x<sub>2</sub>，t<sub>2</sub> can be expressed by x<sub>1</sub>，t<sub>1</sub>，So
+                                        the problem is to optimize x<sub>1</sub> and t<sub>1</sub>. The whole
+                                        optimization problem is</p>
+                                    <img src="https://2019.igem.org/wiki/images/9/93/T--BIT-China--model-5-f10.png">
+                                    <h4>Result</h4>
+                                    <p>In this model, we give the following parameters</p>
+                                    <img src="https://2019.igem.org/wiki/images/e/e3/T--BIT-China--model-5-t1.png">
+                                    <p>Because of the complexity of this function, the common optimization algorithm can
+                                        not solve the equation well, so we use the interval enumerating method to do it.
+                                        We enumerate x<sub>1</sub> with every unit from 1000 to 2000, and enumerate
+                                        t<sub>1</sub> every unit from 0 to 100. The optimization answer is</p>
+                                    <img src="https://2019.igem.org/wiki/images/d/d3/T--BIT-China--model-5-f11.png"
+                                         style="width: auto">
+                                    <p>Finally, it is concluded that if the biological properties of the population can
+                                        not be adjusted, then the adjustment is meaningless. If the adjustment can
+                                        affect k<sub>1</sub>, then this adjustment is useful. Such as if k<sub>1</sub>
+                                        turn from 0.01 to 0.001 when the system transform from growth to production,
+                                        then the answer is</p>
+                                    <img src="https://2019.igem.org/wiki/images/6/62/T--BIT-China--model-5-f12.png"
+                                         style="width: auto">
+                                    <p>This two results could be used to explain the problems of adjustment in actual
+                                        production. And this model plays a very positive guiding role in real industrial
+                                        production.</p>
                                 </el-collapse-item>
                             </el-collapse>
                         </div>
@@ -266,7 +578,7 @@
     var app = new Vue({
         el: '#app',
         data: {
-            activeName: ''
+            activeName: '1'
         },
         methods: {}
     })

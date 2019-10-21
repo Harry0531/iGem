@@ -1,0 +1,332 @@
+{{Template:BIT-China/navigator/HTML}}
+<html>
+<head>
+    <title>Demonstrate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <style>
+        .blogDetail {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail h3 {
+            font-size: 35px !important;
+            line-height: 60px !important;
+            margin: 0 0 20px;
+        }
+
+        .blogDetail h3 a {
+            color: #222222;
+            display: inline-block;
+        }
+
+        .blogDetail h3 a:hover {
+            color: #8180e0;
+        }
+
+        .blogDetail h1 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail h2 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail p {
+            margin: 0 0 28px !important;
+            line-height: 30px !important;
+            font-size: 19px !important;
+        }
+
+        .blogDetail .author {
+            display: inline-block;
+            float: left;
+            font-size: 19px !important;
+            color: #222222 !important;
+            line-height: 30px !important;
+            font-weight: 400 !important;
+            margin: 0 0 0;
+        }
+
+        .blogDetail .author span {
+            color: #8180e0 !important;
+            font-weight: 700 !important;
+        }
+
+        .blogDetail a.view_detail {
+            display: inline-block;
+            float: right;
+            font-size: 19px !important;
+            line-height: 30px !important;
+            color: #8180e0;
+            margin: 0;
+        }
+
+        .blogDetail a.view_detail:hover {
+            color: #222;
+        }
+
+        .list p {
+            color: #929292 !important;
+            margin: 0 15px 0 0 !important;
+            padding: 0 !important;
+            font-size: 15px !important;
+            display: none !important;
+            line-height: 1 !important;
+        }
+
+        .list:hover p {
+            display: block !important;
+            animation: text-show 1s !important;
+            -moz-animation: text-show 1s !important; /* Firefox */
+            -webkit-animation: text-show 1s !important; /* Safari 和 Chrome */
+            -o-animation: text-show 1s !important; /* Opera */
+        }
+
+        .list-item:hover > p {
+            color: black !important;
+            font-size: 19px !important;
+            color: black;
+        }
+
+        .el-collapse-item__header {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .el-collapse-item__content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .el-collapse-item__content h4 {
+            margin-top: 10px;
+        }
+
+        .el-collapse-item__content p {
+            margin: 0 !important;
+        }
+
+        .el-collapse-item__header {
+            font-size: 2rem !important;
+            color: #929292 !important;
+            height: 80px !important;
+            letter-spacing: 0 !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            line-height: 40px !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .el-collapse-item__content p {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail a {
+            color: blue !important;
+        }
+
+        .blogDetail img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .img-center {
+            text-align: center;
+        }
+
+    </style>
+
+
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/bootstrap.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/font-awesome.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/payloan-icon/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/icofont/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/animate/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/settings/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/slick/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.carousel/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/preset/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/responsive/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/autoMenu/CSS?action=raw&ctype=text/css">
+
+</head>
+<body class="bg_right">
+<!-- Preloading -->
+<div id="app">
+    <div class="preloader text-center">
+        <div class="la-ball-circus la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <section class="commonSection blogPage">
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-8">
+                    <div class="singleBlog">
+                        <h1>Demonstrate</h1>
+                        <div class="blogDetail">
+                            <el-collapse v-model="activeName">
+                                <el-collapse-item title="Bronze" name="1">
+                                    <h4>Registration and Jamboree Attendance</h4>
+                                    <p>We fulfilled all bronze medal criteria. Our team registered for iGEM, we had a
+                                        challenging but great iGEM season and we are really looking forward to attend
+                                        the Giant Jamboree.</p>
+                                    <h4>Competition Deliverables</h4>
+                                    <p>
+                                        <a href="https://2019.igem.org/Team:BIT-China">WiKi</a> is OK.<br>
+                                        Poster is already.<br>
+                                        Presentation is already<br>
+                                        <a href="https://igem.org/2019_Judging_Form?id=2972">Judging Form</a> is OK.
+                                    </p>
+                                    <h4>Attributions</h4>
+                                    <p>We are very proud the team, <a href="https://2019.igem.org/Team:BIT-China">BIT-China
+                                        2019</a>. We have described <a
+                                            href="https://2019.igem.org/Team:BIT-China/Attributions">everyone's
+                                        contribution</a> to the project in detail.</p>
+                                    <h4>Project Inspiration and Description</h4>
+                                    <p>On <a href="https://2019.igem.org/Team:BIT-China/Description">our Project
+                                        Description page</a>, we have documented how and why we chose our iGEM
+                                        project and how we will achieve our goals.</p>
+                                    <h4>Characterization</h4>
+                                    <p>We have added quantitative experimental characterization data to an existing
+                                        Part, <a href="http://parts.igem.org/Part:BBa_I715039">BBa_I715039</a> and <a
+                                                href="http://parts.igem.org/Part:BBa_K523013">BBa_K523013</a> from the
+                                        Registry of Standard Biological Parts.</p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Silver" name="2">
+                                    <p>We are certain that we completed all silver medal criteria.</p>
+                                    <h4>Validated Part</h4>
+                                    <p>We documented parts, <a href="http://parts.igem.org/Part:BBa_K2972009">BBa_K2972009</a>,
+                                        <a href="http://parts.igem.org/Part:BBa_K2972010">BBa_K2972010</a> and
+                                        <a href="http://parts.igem.org/Part:BBa_K2972013">BBa_K2972013</a>, on that
+                                        Part's Main Page on the Registry, which fulfill all formal requirements and is
+                                        the core of the project. And we really love them.</p>
+                                    <h4>Collaborations</h4>
+                                    <p>We contributed to the iGEM community in Beijing by hosting the <a
+                                            href="https://2019.igem.org/Team:BIT-China/Human_Practices">Beijing iGEM
+                                        Meet up</a>. And we also collaborated with <a
+                                            href="https://2019.igem.org/Team:Tinghua/Collaborations">Tsinghua</a>,
+                                        <a href="https://2019.igem.org/Team:Peking">Peking</a>, <a
+                                                href="https://2019.igem.org/Team:BIT/Collaborations">BIT</a> and
+                                        <a href="https://2019.igem.org/Team:Tsinghua-A">Tsinghua-A</a>.
+                                    </p>
+                                    <h4>Human Practices</h4>
+                                    <p>We preached to the pubic middle school students and college students. Our
+                                        <a href="http://2019.igem.org/Team:BIT-China/Human_Practices">education and
+                                            public engagement</a> can broaden the influence of iGEM and synthetic
+                                        biology. We also learned from human practices.</p>
+                                </el-collapse-item>
+                                <el-collapse-item title="Gold" name="3">
+                                    <p>Hopefully, we can convince you that we reached the gold medal criteria.</p>
+                                    <h4>Integrated Human Practices</h4>
+                                    <p>We have completed communication with <a
+                                            href="https://2019.igem.org/Team:BIT-China/Human_Practices">the World's Top
+                                        Five Hundred food company COFCO</a>, whose researchers have given professional
+                                        advice on our project and improved it. And our survey can make our better. </p>
+                                    <h4>Improve a Previous Part</h4>
+                                    <p>We improved the previous part BBa_K1499500 to become our core part <a
+                                            href="http://parts.igem.org/Part:BBa_K2972008">BBa_K2972008</a>,
+                                        which make our engineering bacteria can manage resources.</p>
+                                    <h4>Model Our Project</h4>
+                                    <p>We built four <a
+                                            href="https://2019.igem.org/Team:BIT-China/Model">models</a> for the
+                                        project, which can guide the experiments and optimize the production process.
+                                    </p>
+                                    <h4>Demonstration of Our Work</h4>
+                                    <p>We constructed and verify the system in blocks. Please look at our <a
+                                            href="https://2019.igem.org/Team:BIT-China/Experiments">Experiments</a> and
+                                        <a href="https://2019.igem.org/Team:BIT-China/Notebook">Notebook</a>. </p>
+                                </el-collapse-item>
+                            </el-collapse>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="autoMenu"></div>
+
+</div>
+
+
+<script src="https://2019.igem.org/Template:BIT-China/jquery/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/bootstrap.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.revolution.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.tools.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery-ui/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/shuffle/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/slick/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/gmaps/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/owl.carousel/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/theme/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/vue/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/element/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/autoMenu/Javascript?action=raw&ctype=text/javascript"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            activeName: ''
+        },
+        methods: {}
+    })
+</script>
+
+<script>
+    window.onload = autoMenu();
+    document.getElementById("autoMenu").style.display = 'none';
+</script>
+</body>
+</html>
