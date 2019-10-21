@@ -1,0 +1,293 @@
+{{Template:BIT-China/navigator/HTML}}
+<html>
+<head>
+    <title>Background</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include All CSS -->
+    <style>
+        .blogDetail {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail h3 {
+            font-size: 35px !important;
+            line-height: 60px !important;
+            margin: 0 0 20px;
+        }
+
+        .blogDetail h3 a {
+            color: #222222;
+            display: inline-block;
+        }
+
+        .blogDetail h3 a:hover {
+            color: #8180e0;
+        }
+
+        .blogDetail h1 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail h2 {
+            font-size: 2.5rem !important;
+        }
+
+        .blogDetail p {
+            margin: 0 0 28px !important;
+            line-height: 30px !important;
+            font-size: 19px !important;
+        }
+
+        .blogDetail .author {
+            display: inline-block;
+            float: left;
+            font-size: 19px !important;
+            color: #222222 !important;
+            line-height: 30px !important;
+            font-weight: 400 !important;
+            margin: 0 0 0;
+        }
+
+        .blogDetail .author span {
+            color: #8180e0 !important;
+            font-weight: 700 !important;
+        }
+
+        .blogDetail a.view_detail {
+            display: inline-block;
+            float: right;
+            font-size: 19px !important;
+            line-height: 30px !important;
+            color: #8180e0;
+            margin: 0;
+        }
+
+        .blogDetail a.view_detail:hover {
+            color: #222;
+        }
+
+        .list p {
+            color: #929292 !important;
+            margin: 0 15px 0 0 !important;
+            padding: 0 !important;
+            font-size: 15px !important;
+            display: none !important;
+            line-height: 1 !important;
+        }
+
+        .list:hover p {
+            display: block !important;
+            animation: text-show 1s !important;
+            -moz-animation: text-show 1s !important; /* Firefox */
+            -webkit-animation: text-show 1s !important; /* Safari 和 Chrome */
+            -o-animation: text-show 1s !important; /* Opera */
+        }
+
+        .list-item:hover > p {
+            color: black !important;
+            font-size: 19px !important;
+            color: black;
+        }
+
+        .el-collapse-item__header {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .el-collapse-item__content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .el-collapse-item__content h4 {
+            margin-top: 10px;
+        }
+
+        .el-collapse-item__content p {
+            margin: 0 !important;
+        }
+
+        .el-collapse-item__header {
+            font-size: 2rem !important;
+            color: #929292 !important;
+            height: 80px !important;
+            letter-spacing: 0 !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            line-height: 40px !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .el-collapse-item__content p {
+            line-height: 30px !important;
+            color: #929292 !important;
+            letter-spacing: 0 !important;
+            font-size: 19px !important;
+            font-family: 'Muli', sans-serif !important;
+            font-weight: 400 !important;
+            overflow-x: hidden !important;
+            transition: all ease 400ms !important;
+            -webkit-transition: all ease 400ms;
+            -moz-transition: all ease 400ms;
+        }
+
+        .blogDetail a {
+            color: blue !important;
+        }
+
+        .blogDetail img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }Human Practice.html
+
+        .img-center {
+            text-align: center;
+        }
+
+        .my_popover{
+            line-height: 30px;
+            color: blue;
+            letter-spacing: 0;
+            font-size: 19px;
+            font-family: 'Muli', sans-serif;
+            font-weight: 400;
+        }
+        .my_popover:hover{
+            cursor:pointer ;
+        }
+    </style>
+
+
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/bootstrap.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/font-awesome.min/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/payloan-icon/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/icofont/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/animate/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/settings/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/slick/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/owl.carousel/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/preset/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/theme/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/responsive/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/element/CSS?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/navigator/CSS?action=raw&ctype=text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://2019.igem.org/Template:BIT-China/autoMenu/CSS?action=raw&ctype=text/css">
+
+</head>
+<body class="bg_right">
+<!-- Preloading -->
+<div id="app">
+    <div class="preloader text-center">
+        <div class="la-ball-circus la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <section class="commonSection blogPage">
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-8">
+                    <div class="singleBlog">
+                        <h1>Description</h1>
+                        <div class="blogDetail">
+                            <el-collapse v-model="activeName">
+                                <el-collapse-item title="Problems in fermentation industry"
+                                                  name="1">
+                                <p>Constructing bio-synthetic pathways in engineering microbial cells to produce fine chemicals has been considered as a sustainable, environmental-friendly way in modern chemical production. However, these exogenous synthetic pathways directly competing with endogenous metabolic pathway in the usage of both metabolites and “transcriptional resources”. Moreover, over expression of enzymes in exogenous pathways and synthesis of toxic intermediates would cause growth retardation of these microbial cells. It means that ideal state for chemical production often conflicts with cell growth.</p>
+                                </el-collapse-item>
+
+                                <el-collapse-item title="Strategies"
+                                                  name="2">
+                                    <p>Obviously, we need strategies to manage the relationship between growth and production. Ideas of balancing cell growth and producing process has long been existing. Traditional ways to achieve this involve using inducers to initiate product synthesis, which is time-consuming and expensive for large scale production. For more economically viable industrial usage, we develop self-induced system to control the transcription of exogenous genes named “Achieved Transcription Management”.</p>
+                                    <p>The system allocates intracellular “transcriptional resources” to growth-related genes in early stages of fermentation and switches them to product-related genes after a high cell density is achieved. Under guide of mathematical models, the proper cell density is responded by quorum sensing system turning on downstream genes, including σ factors and T7 RNA polymerase. And them control the transcription of exogenous genes responsible for lycopene production.</p>
+                                    <p>In addition, modeling and calculation of enzyme activities make the quantity of enzymes most suitable to reduce the pressure of enzyme synthesis on cells.</p>
+                                </el-collapse-item>
+
+                                <el-collapse-item title="Transcriptional resources"
+                                                  name="3">
+                                    <p>We classify transcriptional resources into two categories: one is transcription resources that directly participate in the transcription process, such as nucleotides. The other is transcriptional resource that assists in accelerating the transcription process, such as RNA polymerase. We use the T7 expression system to achieve the on-demand distribution of nucleotides with a highly competitive exogenous T7 polymerase, which will compete for substrate resources. We use the σ factor orthogonal expression system to directly mobilize RNA polymerase resources on demand.</p>
+                                </el-collapse-item>
+
+                                <el-collapse-item title="Prove"
+                                                  name="4">
+                                    <p>We mainly consider the production and the population density of bacteria in the same culture time compared to the bacteria that do not have the system. We chose lycopene to test whether our design truly balances growth and production. Lycopene, a colored and commercially valuable compound, selected as a product of purpose.</p>
+                                </el-collapse-item>
+                            </el-collapse>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="autoMenu"></div>
+
+</div>
+
+
+<script src="https://2019.igem.org/Template:BIT-China/jquery/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/bootstrap.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.revolution.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery.themepunch.tools.min/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/jquery-ui/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/shuffle/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/slick/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/gmaps/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/owl.carousel/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/theme/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/vue/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/element/Javascript?action=raw&ctype=text/javascript"></script>
+<script src="https://2019.igem.org/Template:BIT-China/autoMenu/Javascript?action=raw&ctype=text/javascript"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            activeName: ''
+        },
+        methods: {}
+    })
+</script>
+
+<script>
+    window.onload = autoMenu();
+    document.getElementById("autoMenu").style.display = 'none';
+</script>
+</body>
+</html>
