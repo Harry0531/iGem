@@ -21,9 +21,9 @@
             <div class="menu">
                 <h1 class="menu-title menu-title_2nd">Team</h1>
                 <ul class="menu-dropdown">
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Team">Team</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Collaborations">Collaborations</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Gallery">Gallery</a></li>
+                    <li onclick="jumpTo('Team')"><a href="https://2019.igem.org/Team:BIT-China/Team">Team</a></li>
+                    <li onclick="jumpTo('Collaborations')"><a href="https://2019.igem.org/Team:BIT-China/Collaborations">Collaborations</a></li>
+                    <li onclick="jumpTo('Attributions')"><a href="https://2019.igem.org/Team:BIT-China/Attributions">Attributions</a></li>
                 </ul>
             </div>
         </li>
@@ -31,13 +31,12 @@
             <div class="menu">
                 <h1 class="menu-title menu-title_3rd">Project</h1>
                 <ul class="menu-dropdown">
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Description">Description</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Background">Background</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Design">Design</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Experiments">Experiments</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Notebook">Notebook</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Results">Results</a></li>
-                    <li><a href="https://2019.igem.org/Team:BIT-China/Demonstrate">Demonstrate</a></li>
+                    <li onclick="jumpTo('Description')"><a href="https://2019.igem.org/Team:BIT-China/Description">Description</a></li>
+                    <li onclick="jumpTo('Background')"><a href="https://2019.igem.org/Team:BIT-China/Background">Background</a></li>
+                    <li onclick="jumpTo('Design')"><a href="https://2019.igem.org/Team:BIT-China/Design">Design</a></li>
+                    <li onclick="jumpTo('Experiments')"><a href="https://2019.igem.org/Team:BIT-China/Experiments">Experiments</a></li>
+                    <li onclick="jumpTo('Notebook')"><a href="https://2019.igem.org/Team:BIT-China/Notebook">Notebook</a></li>
+                    <li onclick="jumpTo('Demonstrate')"><a href="https://2019.igem.org/Team:BIT-China/Demonstrate">Demonstrate</a></li>
                 </ul>
             </div>
         </li>
@@ -77,6 +76,13 @@
         </li>
     </ul>
 </header>
+
+<script>
+    function jumpTo(to) {
+        let path = 'https://2019.igem.org/Team:BIT-China/' + to;
+        window.location.replace(path);
+    }
+</script>
 
 <script>
     var show = false;
