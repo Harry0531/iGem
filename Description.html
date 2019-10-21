@@ -1,4 +1,3 @@
-{{Template:BIT-China/navigator/HTML}}
 <html>
 <head>
     <title>Background</title>
@@ -223,6 +222,27 @@
             <div class="row">
                 <div class="col-lg-12 col-md-8">
                     <div class="singleBlog">
+                        <h1>Inspiration</h1>
+                        <div class="blogDetail">
+                            <el-collapse v-model="activeName2">
+                                <el-collapse-item title="An era of intelligent cell factories"
+                                                  name="1">
+                                    <p>Most of the time, inspiration, like love, is a casual spark. Unfortunately, our project seems to have no love. But it has a mission closely connected with industrial production.</p>
+                                    <p>Our project was born in history. Looking back on BIT-China's history of iGEM, projects are always closely related to industrial production. The predecessors have put forward their own intelligent cell factory scheme in various aspects of microbial industrial production.</p>
+                                    <p>The construction methods of traditional cell factories mainly include the design and optimization of metabolic pathway, the regulation and optimization of gene expression, the optimization of tolerance and the systematic improvement of production conditions.
+                                        Based on traditional cell factories, the intelligent cell factory can respond to the changes of environment and its own state independently, and can adjust the environment or production state independently.
+                                    </p>
+                                    <p>In terms of production technology, the intelligent cell factory built in 2013 can respond to temperature <a href="http://2013.igem.org/Team:BIT-China">(I'M HeRE, 2013)</a>, the intelligent cell factory built in 2015 can respond to pH <a href="http://2015.igem.org/Team:BIT-China">(pH controller, 2015)</a>, and the system built in 2018 can respond to redox state <a href="http://2018.igem.org/Team:BIT-China">(who can get an A, 2018)</a>. They have realized the intelligent recognition of the key environmental factors such as temperature, pH and redox in the fermentation process. And then the cell factories can regulate the environment and have higher tolerance, which saves energy, reduces emissions and increases production.</p>
+                                    <p>In terms of production safety, the project in 2014 guaranteed the safety of production technology in cell factories and ensured that industrial strains would not outflow <a href="http://2014.igem.org/Team:BIT-China">(E.co-Lock, 2014)</a>.</p>
+                                    <p>In terms of production efficiency, the project in 2016 can give cell factories the ability to intelligently remove the "lazy" cells that have lost plasmids in the population, and improve the production capacity of the population <a href="http://2016.igem.org/Team:BIT-China">(P-SLACKiller, 2016)</a>.</p>
+                                    <p>Looking back on the history, the construction of a new intelligent cell factory is the same origin of BIT-China.</p>
+                                    <p>Looking forward to the future, an era of intelligent cell factories is our vision.</p>
+                                    <p>Now, we hope that engineered bacteria can recognize their own growth state, manage resources intelligently and know when to produce and when to grow.</p>
+                                </el-collapse-item>
+                            </el-collapse>
+                        </div>
+                    </div>
+                    <div class="singleBlog">
                         <h1>Description</h1>
                         <div class="blogDetail">
                             <el-collapse v-model="activeName">
@@ -249,13 +269,15 @@
                                 </el-collapse-item>
                             </el-collapse>
 
-                            <el-collapse v-model="activeName2">
-                                <el-collapse-item title="Problems in fermentation industry"
-                                                  name="1">
-                            </el-collapse>
+
+
 
                         </div>
                     </div>
+
+
+
+
 
                 </div>
 
