@@ -248,6 +248,12 @@
                                     <p>We mainly consider the production and the population density of bacteria in the same culture time compared to the bacteria that do not have the system. We chose lycopene to test whether our design truly balances growth and production. Lycopene, a colored and commercially valuable compound, selected as a product of purpose.</p>
                                 </el-collapse-item>
                             </el-collapse>
+
+                            <el-collapse v-model="activeName2">
+                                <el-collapse-item title="Problems in fermentation industry"
+                                                  name="1">
+                            </el-collapse>
+
                         </div>
                     </div>
 
@@ -279,7 +285,8 @@
     var app = new Vue({
         el: '#app',
         data: {
-            activeName: ''
+            activeName: '',
+            activeName2:''
         },
         methods: {}
     })
