@@ -190,7 +190,7 @@
         }
 
         .table-body table tr:nth-child(2n+1) {
-            background-color: #ff1b2c;
+            background-color: #d2d0d4;
         }
 
         .table-head td,
@@ -199,6 +199,10 @@
             height: 42px;
         }
 
+        .table-body th {
+            border:1px solid black;
+            height: 42px;
+        }
         .nav-dot-box:hover .nav-dot-card {
             display: block;
             width: 250px;
@@ -214,7 +218,9 @@
         }
 
 
-
+        #HQ_page td{
+            text-align: center;
+        }
     </style>
 
 
@@ -272,168 +278,157 @@
                         <h1>Parts</h1>
 
                         <div class="blogDetail">
-                            <div class="table-head">
-                            <table>
+                            <div class="table-Body" style="margin-left: 40px">
+                                <table>
                                 <colgroup>
                                     <col style="width: 50px;" />
                                     <col style="width: 150px;" />
-                                    <col style="width: 200px;" />
-                                    <col style="width: 200px;" />
+                                    <col style="width: 300px;" />
+                                    <col style="width: 400px;" />
                                     <col />
                                 </colgroup>
+                                    <thead>
+                                    <tr style="font-size: 20px;">
+                                        <th>No.</th>
+                                        <th>Biobrick</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Length</th>
+                                    </tr>
+                                    </thead>
                                 <tbody style="font-size: 16px;">
-                                <tr>
-                                    <td colspan="5" style="font-family:'kg_second_chances_solidRg';">Regulator</td>
-                                </tr>
+
                                 <tr>
                                     <td>1</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972000" target="_Blank">BBa_K2972000</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Sigma B</td>
+                                    <td>Control Sigma B Promoter</td>
+                                    <td>789 bp</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972001" target="_Blank">BBa_K2972001</a>
                                     </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Sigma F</td>
+                                    <td>Control Sigma F Promoter</td>
+                                    <td>768 bp</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972002" target="_Blank">BBa_K2972002</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Sigma B promoter</td>
+                                    <td>Controlled by σB Factor</td>
+                                    <td>192 bp</td>
                                 </tr>
-                                <tr>
-                                    <td colspan="5" style="font-family:'kg_second_chances_solidRg';">Feedback</td>
-                                </tr>
+<!--                                <tr>-->
+<!--                                    <td colspan="5" style="font-family:'kg_second_chances_solidRg';">Feedback</td>-->
+<!--                                </tr>-->
                                 <tr>
                                     <td>4</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972003" target="_Blank">BBa_K2972003</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Sigma F promoter</td>
+                                    <td>Controlled by σF Factor</td>
+                                    <td>197 bp</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972004" target="_Blank">BBa_K2972004</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Phytoene desaturase (crtI)</td>
+                                    <td>One of Lycopene Synthetase</td>
+                                    <td>1479 bp</td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972005" target="_Blank">BBa_K2972005</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>GGPP synthase (crtE)</td>
+                                    <td>One of Lycopene Synthetase</td>
+                                    <td>912 bp</td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972006" target="_Blank">BBa_K2972006</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Phytoene Synthase (crtB)</td>
+                                    <td>One of Lycopene Synthetase</td>
+                                    <td>891 bp</td>
                                 </tr>
                                 <tr>
                                     <td>8</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972007" target="_Blank">BBa_K2972007</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>mCherry</td>
+                                    <td>Red Fluorescent Protein</td>
+                                    <td>678 bp</td>
                                 </tr>
-                                <tr>
-                                    <td colspan="5" style="font-family:'kg_second_chances_solidRg';">Output</td>
-                                </tr>
+<!--                                <tr>-->
+<!--                                    <td colspan="5" style="font-family:'kg_second_chances_solidRg';">Output</td>-->
+<!--                                </tr>-->
                                 <tr>
                                     <td>9</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972008" target="_Blank">BBa_K2972008</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Quorum sensing (QS) sensitivity test</td>
+                                    <td>Find out the appropriate  QS</td>
+                                    <td>2494 bp</td>
                                 </tr>
                                 <tr>
                                     <td>10</td>
                                     <td>
                                         <a href="http://parts.igem.org/Part:BBa_K2972009" target="_Blank">BBa_K2972009</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Sigma B Promoter Test Composition</td>
+                                    <td>Characterize the Strength of PσB</td>
+                                    <td>1011 bp</td>
                                 </tr>
                                 <tr>
                                     <td>11</td>
                                     <td>
-                                        <a href="http://parts.igem.org/Part:BBa_K29720010" target="_Blank">BBa_K29720010</a>
+                                        <a href="http://parts.igem.org/Part:BBa_K2972010" target="_Blank">BBa_K2972010</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Sigma F Promoter Test Composition</td>
+                                    <td>Characterize the Strength of PσB</td>
+                                    <td>1016 bp</td>
                                 </tr>
                                 <tr>
                                     <td>12</td>
                                     <td>
-                                        <a href="http://parts.igem.org/Part:BBa_K29720011" target="_Blank">BBa_K29720011</a>
+                                        <a href="http://parts.igem.org/Part:BBa_K2972011" target="_Blank">BBa_K2972011</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>T7 RNA polymerase</td>
+                                    <td>Control T7 Promoter</td>
+                                    <td>2685 bp</td>
                                 </tr>
                                 <tr>
                                     <td>13</td>
                                     <td>
-                                        <a href="http://parts.igem.org/Part:BBa_K29720012" target="_Blank">BBa_K29720012</a>
+                                        <a href="http://parts.igem.org/Part:BBa_K2972012" target="_Blank">BBa_K2972012</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>Plasmid one</td>
+                                    <td>Control Synthesis Circuit</td>
+                                    <td>6065 bp</td>
                                 </tr>
                                 <tr>
                                     <td>14</td>
                                     <td>
-                                        <a href="http://parts.igem.org/Part:BBa_K29720013" target="_Blank">BBa_K29720013</a>
+                                        <a href="http://parts.igem.org/Part:BBa_K2972013" target="_Blank">BBa_K2972013</a>
                                     </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>15</td>
-                                    <td>
-                                        <a href="http://parts.igem.org/Part:BBa_K29720014" target="_Blank">BBa_K29720014</a>
-                                    </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
-                                </tr>
-                                <tr>
-                                    <td>16</td>
-                                    <td>
-                                        <a href="http://parts.igem.org/Part:BBa_K29720015" target="_Blank">BBa_K29720015</a>
-                                    </td>
-                                    <td></td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td>T7 Promoter Test Composition</td>
+                                    <td>Characterize the Strength of pT7</td>
+                                    <td>863 bp</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -446,7 +441,6 @@
             </div>
         </div>
     </section>
-    <div id="autoMenu"></div>
 
 </div>
 
